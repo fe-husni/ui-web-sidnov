@@ -1,0 +1,19 @@
+{
+  "name": "ui-web-sidnov",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Husni Mubarok",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@iconify-json/solar": "^1.2.2",
+    "@iconify/tailwind": "^1.2.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17"
+  }
+}

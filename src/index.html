@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="w-full border-b border-gray-400 bg-white">
+    <!-- Top Navbar -->
+    <div class="max-w-screen-xl mx-auto flex items-center justify-between py-4 px-6">
+      <!-- Search -->
+      <div class="flex items-center gap-2 text-gray">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>        
+        <input type="text" placeholder="Search" class="text-gray-500 text-lg outline-none bg-transparent placeholder-gray-500 focus:ring-0" />
+      </div>
+  
+      <!-- Logo -->
+      <img src="../public/assets/Sidnov-Logo.png" alt="SIDNOV Indonesia" class="h-16 object-contain" />
+  
+      <!-- Sign-in & Cart (Hidden in Mobile) -->
+      <div class="hidden md:flex items-center gap-6">
+        <p class="text-lg">
+          <span class="text-gray-900 cursor-pointer hover:underline">Sign in</span>
+          &nbsp;/&nbsp;
+          <span class="text-gray-500 cursor-pointer hover:underline">Sign up</span>
+        </p>
+        <div class="relative flex items-center gap-2">
+          <span class="icon-[solar--cart-5-linear]" style="width: 24px; height: 24px;"></span>
+          <span class="text-lg text-gray-900">(2)</span>
+        </div>
+      </div>
+  
+      <!-- Hamburger Menu Button (Mobile Only) -->
+      <input type="checkbox" id="menu-toggle" class="peer hidden" />
+      <label for="menu-toggle" class="md:hidden cursor-pointer">
+        <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </label>
+    </div>
+  
+    <!-- Bottom Navbar -->
+    <div class="border-t border-gray-300">
+      <div class="max-w-screen-xl mx-auto flex justify-center py-4">
+        <ul class="hidden md:flex gap-8 text-lg font-medium">
+          <li class="text-gray-900 underline cursor-pointer">HOME</li>
+          <li class="text-gray-900 cursor-pointer hover:underline">SHOP</li>
+          <li class="text-gray-900 cursor-pointer hover:underline">STORIES</li>
+          <li class="text-gray-900 cursor-pointer hover:underline">ABOUT</li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Mobile Dropdown Menu -->
+    <div class="peer-checked:block hidden md:hidden w-full bg-white border-t border-gray-300">
+      <ul class="flex flex-col items-center gap-4 py-4">
+        <li class="text-gray-900 underline cursor-pointer">HOME</li>
+        <li class="text-gray-900 cursor-pointer hover:underline">SHOP</li>
+        <li class="text-gray-900 cursor-pointer hover:underline">STORIES</li>
+        <li class="text-gray-900 cursor-pointer hover:underline">ABOUT</li>
+        <li class="text-gray-900 cursor-pointer hover:underline">Sign in / Sign up</li>
+        <li class="flex items-center gap-2 cursor-pointer hover:underline">
+          <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18l-2 13H5L3 3z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 21a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-6 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+          </svg>
+          <span class="text-lg text-gray-900">(2)</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="flex justify-center items-center text-center font-title" style="height: 100vh;">
+    TESTT
+  </section>
+  
+</body>
+
+</html>
