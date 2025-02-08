@@ -8,77 +8,128 @@
 </head>
 
 <body>
-  <nav class="w-full border-b border-gray-400 bg-white">
-    <!-- Top Navbar -->
-    <div class="max-w-screen-xl mx-auto flex items-center justify-between py-4 px-6">
-      <!-- Search -->
-      <div class="flex items-center gap-2 text-gray">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-        </svg>        
-        <input type="text" placeholder="Search" class="text-gray-500 text-lg outline-none bg-transparent placeholder-gray-500 focus:ring-0" />
-      </div>
-  
-      <!-- Logo -->
-      <img src="../public/assets/Sidnov-Logo.png" alt="SIDNOV Indonesia" class="h-16 object-contain" />
-  
-      <!-- Sign-in & Cart (Hidden in Mobile) -->
-      <div class="hidden md:flex items-center gap-6">
-        <p class="text-lg">
-          <span class="text-gray-900 cursor-pointer hover:underline">Sign in</span>
-          &nbsp;/&nbsp;
-          <span class="text-gray-500 cursor-pointer hover:underline">Sign up</span>
-        </p>
-        <div class="relative flex items-center gap-2">
-          <span class="icon-[solar--cart-5-linear]" style="width: 24px; height: 24px;"></span>
-          <span class="text-lg text-gray-900">(2)</span>
+  <!-- Main Navbar -->
+  <header class="w-full bg-white border-b border-gray-200">
+    <nav class="relative max-w-[85rem] w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="grid grid-cols-3 items-center">
+        <!-- Left Section - Mobile Toggle & Desktop Search -->
+        <div class="flex items-center">
+          <!-- Mobile Toggle Button -->
+          <button type="button" class="md:hidden size-9 flex justify-center items-center text-gray-800"
+            data-hs-overlay="#mobile-menu" aria-controls="mobile-menu" aria-label="Toggle navigation">
+            <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+          <!-- Desktop Search -->
+          <div class="hidden md:block max-w-xs">
+            <div class="relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3.5">
+                <svg class="size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <input type="text"
+                class="py-2 ps-10 pe-4 block w-full border border-gray-200 text-sm focus:border-gray-500 focus:ring-gray-500"
+                placeholder="Search">
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Section - Logo -->
+        <div class="flex justify-center">
+          <a href="/" class="flex-none">
+            <img src="../public/assets/Sidnov-Logo.png" alt="Sidnov" class="h-20">
+          </a>
+        </div>
+
+        <!-- Right Section - Auth & Cart -->
+        <div class="flex items-center justify-end gap-4">
+          <div class="hidden md:flex items-center gap-2">
+            <a href="/signin" class="text-sm text-gray-800">Sign in</a>
+            <span class="text-gray-300">/</span>
+            <a href="/signup" class="text-sm text-gray-500">Sign up</a>
+          </div>
+          <a href="/cart" class="flex items-center gap-1 text-sm">
+            <span class="hidden md:inline-block">Cart</span>
+            <span>(2)</span>
+            <span class="icon-[solar--cart-5-linear] w-6 h-6"></span>
+          </a>
         </div>
       </div>
-  
-      <!-- Hamburger Menu Button (Mobile Only) -->
-      <input type="checkbox" id="menu-toggle" class="peer hidden" />
-      <label for="menu-toggle" class="md:hidden cursor-pointer">
-        <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </label>
-    </div>
-  
-    <!-- Bottom Navbar -->
-    <div class="border-t border-gray-300">
-      <div class="max-w-screen-xl mx-auto flex justify-center py-4">
-        <ul class="hidden md:flex gap-8 text-lg font-medium">
-          <li class="text-gray-900 underline cursor-pointer">HOME</li>
-          <li class="text-gray-900 cursor-pointer hover:underline">SHOP</li>
-          <li class="text-gray-900 cursor-pointer hover:underline">STORIES</li>
-          <li class="text-gray-900 cursor-pointer hover:underline">ABOUT</li>
-        </ul>
+    </nav>
+
+    <!-- Secondary Navigation (Desktop) -->
+    <nav class="hidden md:block bg-white shadow-md border-t">
+      <div class="max-w-[85rem] mx-auto px-4">
+        <div class="flex justify-center gap-10 py-3">
+          <a href="/" class="font-bold text-sm text-gray-800 underline">HOME</a>
+          <a href="/shop" class="font-medium text-sm text-gray-800 hover:underline">SHOP</a>
+          <a href="/stories" class="font-medium text-sm text-gray-800 hover:underline">STORIES</a>
+          <a href="/about" class="font-medium text-sm text-gray-800 hover:underline">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+      class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-[60] bg-white border-e hidden"
+      tabindex="-1">
+      <div class="flex justify-between items-center py-3 px-4 border-b">
+        <h3 class="font-bold text-gray-800">Menu</h3>
+        <button type="button"
+          class="flex justify-center items-center size-9 text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+          data-hs-overlay="#mobile-menu">
+          <span class="sr-only">Close modal</span>
+          <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-4">
+        <!-- Mobile Search -->
+        <div class="relative mb-4">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5">
+            <svg class="size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <input type="text"
+            class="py-2 ps-10 pe-4 block w-full border border-gray-200 text-sm focus:border-gray-500 focus:ring-gray-500"
+            placeholder="Search">
+        </div>
+
+        <!-- Mobile Nav Links -->
+        <div class="space-y-2">
+          <a href="/" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">HOME</a>
+          <a href="/shop" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">SHOP</a>
+          <a href="/stories" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
+          <a href="/about" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">ABOUT</a>
+        </div>
+
+        <!-- Mobile Auth -->
+        <div class="flex items-center gap-2 pt-4 mt-4 border-t border-gray-200">
+          <a href="/signin" class="text-sm text-gray-800">Sign in</a>
+          <span class="text-gray-300">/</span>
+          <a href="/signup" class="text-sm text-gray-500">Sign up</a>
+        </div>
       </div>
     </div>
-  
-    <!-- Mobile Dropdown Menu -->
-    <div class="peer-checked:block hidden md:hidden w-full bg-white border-t border-gray-300">
-      <ul class="flex flex-col items-center gap-4 py-4">
-        <li class="text-gray-900 underline cursor-pointer">HOME</li>
-        <li class="text-gray-900 cursor-pointer hover:underline">SHOP</li>
-        <li class="text-gray-900 cursor-pointer hover:underline">STORIES</li>
-        <li class="text-gray-900 cursor-pointer hover:underline">ABOUT</li>
-        <li class="text-gray-900 cursor-pointer hover:underline">Sign in / Sign up</li>
-        <li class="flex items-center gap-2 cursor-pointer hover:underline">
-          <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18l-2 13H5L3 3z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" d="M16 21a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-6 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-          </svg>
-          <span class="text-lg text-gray-900">(2)</span>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  </header>
 
   <section class="flex justify-center items-center text-center font-title" style="height: 100vh;">
     TESTT
   </section>
-  
+
+  <!-- Preline Library -->
+  <script src="../public/lib/preline.js"></script>
 </body>
 
 </html>
