@@ -957,12 +957,23 @@ html{
   margin-top: 0.5rem;
 }
 
+.mt-24{
+  margin-top: 6rem;
+}
+
 .mt-4{
   margin-top: 1rem;
 }
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .block{
@@ -1035,10 +1046,6 @@ html{
   height: 0.625rem !important;
 }
 
-.h-12{
-  height: 3rem;
-}
-
 .h-2{
   height: 0.5rem;
 }
@@ -1051,12 +1058,12 @@ html{
   height: 1.5rem;
 }
 
-.h-full{
-  height: 100%;
+.h-8{
+  height: 2rem;
 }
 
-.h-screen{
-  height: 100vh;
+.h-full{
+  height: 100%;
 }
 
 .\!w-2\.5{
@@ -1067,12 +1074,12 @@ html{
   width: 2.5rem;
 }
 
-.w-12{
-  width: 3rem;
-}
-
 .w-6{
   width: 1.5rem;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .w-\[calc\(100\%-2rem\)\]{
@@ -1081,10 +1088,6 @@ html{
 
 .w-full{
   width: 100%;
-}
-
-.max-w-2xl{
-  max-width: 42rem;
 }
 
 .max-w-\[300px\]{
@@ -1138,12 +1141,12 @@ html{
   resize: both;
 }
 
-.grid-cols-1{
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-3{
@@ -1152,6 +1155,10 @@ html{
 
 .flex-col{
   flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
 }
 
 .flex-nowrap{
@@ -1217,13 +1224,17 @@ html{
        column-gap: 0.75rem;
 }
 
-.gap-x-6{
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+.gap-x-5{
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
 }
 
-.gap-y-10{
-  row-gap: 2.5rem;
+.gap-y-12{
+  row-gap: 3rem;
+}
+
+.gap-y-4{
+  row-gap: 1rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -1428,11 +1439,6 @@ html{
   padding-right: 2rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1446,6 +1452,10 @@ html{
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.pb-28{
+  padding-bottom: 7rem;
 }
 
 .pe-4{
@@ -1503,6 +1513,11 @@ html{
   font-size: 12px;
 }
 
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1526,6 +1541,10 @@ html{
   font-weight: 700;
 }
 
+.font-extrabold{
+  font-weight: 800;
+}
+
 .font-medium{
   font-weight: 500;
 }
@@ -1540,10 +1559,6 @@ html{
 
 .lowercase{
   text-transform: lowercase;
-}
-
-.tracking-tight{
-  letter-spacing: -0.025em;
 }
 
 .text-blue-500{
@@ -1576,11 +1591,6 @@ html{
   color: rgb(31 41 55 / var(--tw-text-opacity, 1));
 }
 
-.text-gray-900{
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
-}
-
 .text-green-600{
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity, 1));
@@ -1589,11 +1599,6 @@ html{
 .text-red-600{
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity, 1));
-}
-
-.text-stone-900{
-  --tw-text-opacity: 1;
-  color: rgb(28 25 23 / var(--tw-text-opacity, 1));
 }
 
 .text-white{
@@ -1650,8 +1655,8 @@ html{
   transition-duration: 500ms;
 }
 
-.hover\:-rotate-180:hover{
-  --tw-rotate: -180deg;
+.hover\:rotate-180:hover{
+  --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1660,9 +1665,19 @@ html{
   background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-emerald-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 211 153 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-gray-100:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-sky-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-white:hover{
@@ -1736,12 +1751,21 @@ html{
   opacity: 0.5;
 }
 
-.group:hover .group-hover\:opacity-100{
-  opacity: 1;
+.group:hover .group-hover\:line-clamp-none{
+  overflow: visible;
+  display: block;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: none;
 }
 
-.group:hover .group-hover\:opacity-75{
-  opacity: 0.75;
+.group:hover .group-hover\:scale-\[1\.2\]{
+  --tw-scale-x: 1.2;
+  --tw-scale-y: 1.2;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:opacity-100{
+  opacity: 1;
 }
 
 .open.hs-overlay-open\:translate-x-0{
@@ -1773,22 +1797,17 @@ html{
 }
 
 @media (min-width: 640px){
-  .sm\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .sm\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-
-  .sm\:py-24{
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
 }
 
 @media (min-width: 768px){
+  .md\:mt-12{
+    margin-top: 3rem;
+  }
+
   .md\:block{
     display: block;
   }
@@ -1805,17 +1824,47 @@ html{
     display: none;
   }
 
+  .md\:h-12{
+    height: 3rem;
+  }
+
   .md\:w-1\/2{
     width: 50%;
+  }
+
+  .md\:w-12{
+    width: 3rem;
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:flex-row{
     flex-direction: row;
   }
 
+  .md\:gap-4{
+    gap: 1rem;
+  }
+
+  .md\:p-3{
+    padding: 0.75rem;
+  }
+
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1828,6 +1877,10 @@ html{
     grid-column: span 7 / span 7;
   }
 
+  .lg\:h-screen{
+    height: 100vh;
+  }
+
   .lg\:w-9\/12{
     width: 75%;
   }
@@ -1836,16 +1889,20 @@ html{
     width: 100%;
   }
 
-  .lg\:max-w-7xl{
-    max-width: 80rem;
-  }
-
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:flex-col{
     flex-direction: column;
+  }
+
+  .lg\:gap-12{
+    gap: 3rem;
+  }
+
+  .lg\:gap-16{
+    gap: 4rem;
   }
 
   .lg\:px-12{
@@ -1858,9 +1915,19 @@ html{
     padding-right: 2rem;
   }
 
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .lg\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 

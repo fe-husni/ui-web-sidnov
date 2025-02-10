@@ -126,7 +126,7 @@
 
   <!-- HERO SECTION -->
   <section>
-    <div class="container mx-auto lg:px-12 px-4 pt-8 h-screen">
+    <div class="container mx-auto lg:px-12 px-4 pt-8 lg:h-screen">
       <div class="grid grid-cols-12 justify-center items-center gap-5">
         <!-- Laptop Bag -->
         <div class="col-span-12 lg:col-span-7 relative group">
@@ -144,10 +144,10 @@
         <!-- Square Bags -->
         <div class="col-span-12 lg:col-span-5 flex flex-col md:flex-row lg:flex-col gap-5">
           <div class="relative group w-full md:w-1/2 lg:w-full">
-            <img src="../public/assets/square_bag.webp" alt="Square Bag" class="object-cover w-full h-full">
+            <img src="../public/assets/tote_bag.webp" alt="Square Bag" class="object-cover w-full h-full">
             <div
               class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
-              <h2 class="text-xl md:text-3xl font-title">Square Bags</h2>
+              <h2 class="text-xl md:text-3xl font-title">Tote Bags</h2>
               <p class="text-xs lg:text-base text-center lg:w-9/12">Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
               </p>
@@ -156,7 +156,7 @@
             </div>
           </div>
           <div class="relative group w-full md:w-1/2 lg:w-full">
-            <img src="../public/assets/sb.png" alt="Tote Bag" class="object-cover w-full h-full">
+            <img src="../public/assets/square_bag.webp" alt="Tote Bag" class="object-cover w-full h-full">
             <div
               class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
               <h2 class="text-xl md:text-3xl font-title">Square Bags</h2>
@@ -173,54 +173,273 @@
   </section>
   <!-- HERO SECTION END -->
 
-
   <!-- NEW PRODUCT SECTION -->
   <section>
-    <div class="container mx-auto lg:px-12 px-4">
-      <div class="bg-white">
-        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h2 class="text-2xl font-bold tracking-tight text-gray-900">New Products</h2>
+    <div class="container mx-auto lg:px-12 px-4 mt-24 md:mt-12 pb-28">
+      <div class="flex flex-col gap-10 lg:gap-16">
+        <div class="title flex gap-y-4 flex-col md:flex-row justify-between items-center w-full">
+          <h1 class="text-2xl md:text-4xl font-extrabold">New Products</h1>
+          <div
+            class="flex flex-wrap text-xs lg:text-lg text-gray-500 font-medium gap-6 lg:gap-12 justify-center gap-y-4 cursor-pointer">
+            <span class="text-gray-800 underline" data-filter="all">All</span>
+            <span data-filter=".square_bag">Square Bag</span>
+            <span data-filter=".tote_bag">Tote Bag</span>
+            <span data-filter=".laptop_bag">Laptop Bag</span>
+            <span data-filter=".accessories">Accessories</span>
+          </div>
+        </div>
 
-          <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            <div class="group relative">
-              <img src="../public/assets/tb.png"
-                alt="Front of men&#039;s Basic Tee in black."
-                class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75">
-              <div class="mt-6 flex gap-6 flex-col justify-between">
-                <div>
-                  <h3 class="text-2xl font-bold text-stone-900">
-                    <a href="#">
-                      <span aria-hidden="true" class="absolute inset-0"></span>
-                      Square Bag - "Songbird Serenade" Pattern
-                    </a>
-                  </h3>
-                  <p class="mt-2 text-xl font-semibold text-stone-900">Rp 230.000</p>
-                </div>
-                <div class="group-btn flex gap-4 transition duration-500">
-                  <a href="#"
-                    class="w-12 h-12 p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden">
-                    <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-12 xl:gap-x-8"
+          id="product_container">
+          <div class="group relative overflow-hidden rounded-md product-card square_bag">
+            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+              <img src="../public/assets/new_product_1.webp" alt="Front of men's Basic Tee in black."
+                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
+            </div>
+            <div class="mt-6 flex gap-6 flex-col justify-between">
+              <div>
+                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Square Bag - "Floral Breeze" Edition
                   </a>
-                  <a href="#"
-                    class="w-12 h-12 p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden">
-                    <span class="icon-[solar--eye-outline] text-3xl"></span>
-                  </a>
-
-                </div>
+                </h3>
+                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 245.000</p>
+              </div>
+              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-emerald-400">
+                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                </a>
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-sky-400">
+                  <span class="icon-[solar--eye-outline] text-3xl"></span>
+                </a>
               </div>
             </div>
-
-            <!-- More products... -->
-
+          </div>
+          <div class="group relative overflow-hidden rounded-md product-card tote_bag">
+            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+              <img src="../public/assets/new_product_2.webp" alt="Front of men's Basic Tee in black."
+                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
+            </div>
+            <div class="mt-6 flex gap-6 flex-col justify-between">
+              <div>
+                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Tote Bag - "Geometric Bliss" Design
+                  </a>
+                </h3>
+                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 210.000</p>
+              </div>
+              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-emerald-400">
+                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                </a>
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-sky-400">
+                  <span class="icon-[solar--eye-outline] text-3xl"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-md product-card laptop_bag">
+            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+              <img src="../public/assets/new_product_3.webp" alt="Front of men's Basic Tee in black."
+                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
+            </div>
+            <div class="mt-6 flex gap-6 flex-col justify-between">
+              <div>
+                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Laptop Bag - "Orca whale" Pattern
+                  </a>
+                </h3>
+                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 250.000</p>
+              </div>
+              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-emerald-400">
+                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                </a>
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-sky-400">
+                  <span class="icon-[solar--eye-outline] text-3xl"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-md product-card accessories">
+            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+              <img src="../public/assets/new_product_4.webp" alt="Front of men's Basic Tee in black."
+                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
+            </div>
+            <div class="mt-6 flex gap-6 flex-col justify-between">
+              <div>
+                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    SIDNOV Charm Bag - "Geometric Sunset Glow" Edition
+                  </a>
+                </h3>
+                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 230.000</p>
+              </div>
+              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-emerald-400">
+                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                </a>
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-sky-400">
+                  <span class="icon-[solar--eye-outline] text-3xl"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-md product-card square_bag">
+            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+              <img src="../public/assets/new_product_5.webp" alt="Front of men's Basic Tee in black."
+                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
+            </div>
+            <div class="mt-6 flex gap-6 flex-col justify-between">
+              <div>
+                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Square Bag - "Abstract Harmony" Pattern
+                  </a>
+                </h3>
+                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 280.000</p>
+              </div>
+              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-emerald-400">
+                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                </a>
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-sky-400">
+                  <span class="icon-[solar--eye-outline] text-3xl"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-md product-card tote_bag">
+            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+              <img src="../public/assets/new_product_6.webp" alt="Front of men's Basic Tee in black."
+                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
+            </div>
+            <div class="mt-6 flex gap-6 flex-col justify-between">
+              <div>
+                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Tote Bag - "Nature Vibes"
+                  </a>
+                </h3>
+                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 215.000</p>
+              </div>
+              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-emerald-400">
+                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                </a>
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-sky-400">
+                  <span class="icon-[solar--eye-outline] text-3xl"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-md product-card laptop_bag">
+            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+              <img src="../public/assets/new_product_7.webp" alt="Front of men's Basic Tee in black."
+                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
+            </div>
+            <div class="mt-6 flex gap-6 flex-col justify-between">
+              <div>
+                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Laptop Bag - "Elegant Noir" Pattern
+                  </a>
+                </h3>
+                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 265.000</p>
+              </div>
+              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-emerald-400">
+                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                </a>
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-sky-400">
+                  <span class="icon-[solar--eye-outline] text-3xl"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-md product-card accessories">
+            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+              <img src="../public/assets/new_product_8.webp" alt="Front of men's Basic Tee in black."
+                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
+            </div>
+            <div class="mt-6 flex gap-6 flex-col justify-between">
+              <div>
+                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    SIDNOV Charm Bag V2 - "Geometric Sunset Glow" Edition
+                  </a>
+                </h3>
+                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 249.000</p>
+              </div>
+              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-emerald-400">
+                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                </a>
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-180 hover:bg-sky-400">
+                  <span class="icon-[solar--eye-outline] text-3xl"></span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- NEW PRODUCT SECTION END -->
+  <!-- NEW PRODUCT SECTION END-->
+
+  <script>
+    /*=============== MIXITUP FILTER PRODUCT ===============*/
+    document.addEventListener("DOMContentLoaded", function () {
+      let mixProduct = mixitup('#product_container', {
+        selectors: {
+          target: '.product-card'
+        },
+        animation: {
+          duration: 500
+        }
+      });
+
+      // Menambahkan event listener ke tombol filter
+      document.querySelectorAll('[data-filter]').forEach(filterBtn => {
+        filterBtn.addEventListener('click', function () {
+          document.querySelectorAll('[data-filter]').forEach(btn => btn.classList.remove('text-gray-800', 'underline', 'font-bold'));
+          this.classList.add('text-gray-800', 'underline', 'font-bold');
+        });
+      });
+    });
+  </script>
 
   <!-- Preline Library -->
-  <script src="../public/lib/preline.js"></script>
+  <script src="../public/js/preline.js"></script>
+
+  <!-- Mixitup V3 Library -->
+  <script src="../public/js/mixitup.min.js"></script>
 </body>
 
 </html>
