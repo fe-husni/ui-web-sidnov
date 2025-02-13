@@ -833,6 +833,20 @@ html{
   --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='black' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M12 8.25a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5M9.75 12a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0'/%3E%3Cpath d='M12 3.25c-4.514 0-7.555 2.704-9.32 4.997l-.031.041c-.4.519-.767.996-1.016 1.56c-.267.605-.383 1.264-.383 2.152s.116 1.547.383 2.152c.25.564.617 1.042 1.016 1.56l.032.041C4.445 18.046 7.486 20.75 12 20.75s7.555-2.704 9.32-4.997l.031-.041c.4-.518.767-.996 1.016-1.56c.267-.605.383-1.264.383-2.152s-.116-1.547-.383-2.152c-.25-.564-.617-1.041-1.016-1.56l-.032-.041C19.555 5.954 16.514 3.25 12 3.25M3.87 9.162C5.498 7.045 8.15 4.75 12 4.75s6.501 2.295 8.13 4.412c.44.57.696.91.865 1.292c.158.358.255.795.255 1.546s-.097 1.188-.255 1.546c-.169.382-.426.722-.864 1.292C18.5 16.955 15.85 19.25 12 19.25s-6.501-2.295-8.13-4.412c-.44-.57-.696-.91-.865-1.292c-.158-.358-.255-.795-.255-1.546s.097-1.188.255-1.546c.169-.382.426-.722.864-1.292'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+.icon-\[solar--heart-outline\]{
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' fill-rule='evenodd' d='M5.624 4.424C3.965 5.182 2.75 6.986 2.75 9.137c0 2.197.9 3.891 2.188 5.343c1.063 1.196 2.349 2.188 3.603 3.154q.448.345.885.688c.526.415.995.778 1.448 1.043s.816.385 1.126.385s.674-.12 1.126-.385c.453-.265.922-.628 1.448-1.043q.437-.344.885-.687c1.254-.968 2.54-1.959 3.603-3.155c1.289-1.452 2.188-3.146 2.188-5.343c0-2.15-1.215-3.955-2.874-4.713c-1.612-.737-3.778-.542-5.836 1.597a.75.75 0 0 1-1.08 0C9.402 3.882 7.236 3.687 5.624 4.424M12 4.46C9.688 2.39 7.099 2.1 5 3.059C2.786 4.074 1.25 6.426 1.25 9.138c0 2.665 1.11 4.699 2.567 6.339c1.166 1.313 2.593 2.412 3.854 3.382q.43.33.826.642c.513.404 1.063.834 1.62 1.16s1.193.59 1.883.59s1.326-.265 1.883-.59c.558-.326 1.107-.756 1.62-1.16q.396-.312.826-.642c1.26-.97 2.688-2.07 3.854-3.382c1.457-1.64 2.567-3.674 2.567-6.339c0-2.712-1.535-5.064-3.75-6.077c-2.099-.96-4.688-.67-7 1.399' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -934,6 +948,11 @@ html{
   grid-column: span 12 / span 12;
 }
 
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
@@ -967,6 +986,10 @@ html{
 
 .mb-2{
   margin-bottom: 0.5rem;
+}
+
+.mb-24{
+  margin-bottom: 6rem;
 }
 
 .mb-4{
@@ -1096,6 +1119,10 @@ html{
 
 .h-20{
   height: 5rem;
+}
+
+.h-40{
+  height: 10rem;
 }
 
 .h-5{
@@ -1311,6 +1338,10 @@ html{
   gap: 1.5rem;
 }
 
+.gap-8{
+  gap: 2rem;
+}
+
 .gap-x-1{
   -moz-column-gap: 0.25rem;
        column-gap: 0.25rem;
@@ -1449,6 +1480,10 @@ html{
   border-inline-end-width: 1px;
 }
 
+.border-l-4{
+  border-left-width: 4px;
+}
+
 .border-t{
   border-top-width: 1px;
 }
@@ -1533,6 +1568,11 @@ html{
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
 }
 
+.bg-red-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity, 1));
+}
+
 .bg-sky-300{
   --tw-bg-opacity: 1;
   background-color: rgb(125 211 252 / var(--tw-bg-opacity, 1));
@@ -1559,14 +1599,36 @@ html{
   background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
 .from-\[\#AE16D0\]{
   --tw-gradient-from: #AE16D0 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(174 22 208 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-stone-900{
+  --tw-gradient-from: #1c1917 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(28 25 23 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-\[\#FEA91A\]{
   --tw-gradient-to: #FEA91A var(--tw-gradient-to-position);
+}
+
+.to-zinc-500{
+  --tw-gradient-to: #71717a var(--tw-gradient-to-position);
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-center{
+  background-position: center;
 }
 
 .fill-black{
@@ -1758,6 +1820,10 @@ html{
   font-weight: 800;
 }
 
+.font-light{
+  font-weight: 300;
+}
+
 .font-medium{
   font-weight: 500;
 }
@@ -1806,6 +1872,16 @@ html{
 .text-blue-600{
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-100{
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-200{
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-300{
@@ -1942,8 +2018,8 @@ html{
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
-.hover\:rotate-180:hover{
-  --tw-rotate: 180deg;
+.hover\:rotate-\[360deg\]:hover{
+  --tw-rotate: 360deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1975,6 +2051,11 @@ html{
 .hover\:bg-gray-900:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-red-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-red-600:hover{
@@ -2229,6 +2310,10 @@ html{
     height: 3rem;
   }
 
+  .md\:h-56{
+    height: 14rem;
+  }
+
   .md\:w-1\/2{
     width: 50%;
   }
@@ -2266,6 +2351,11 @@ html{
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .md\:text-\[40px\]{
@@ -2310,12 +2400,20 @@ html{
     display: grid;
   }
 
+  .lg\:h-80{
+    height: 20rem;
+  }
+
   .lg\:h-screen{
     height: 100vh;
   }
 
   .lg\:w-1\/2{
     width: 50%;
+  }
+
+  .lg\:w-64{
+    width: 16rem;
   }
 
   .lg\:w-9\/12{
@@ -2332,6 +2430,10 @@ html{
 
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
   }
 
   .lg\:flex-col{
