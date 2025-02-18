@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHOP - SIDNOV INDONESIA</title>
-  <link href="./output.css" rel="stylesheet">
+  <link href="/src/output.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,17 +43,17 @@
 
         <!-- Center Section - Logo -->
         <div class="flex justify-center">
-          <a href="index.html" class="flex-none">
-            <img src="../public/assets/Sidnov-Logo.png" alt="Sidnov" class="h-20">
+          <a href="/src/index.html" class="flex-none">
+            <img src="/public/assets/Sidnov-Logo.png" alt="Sidnov" class="h-20">
           </a>
         </div>
 
         <!-- Right Section - Auth & Cart -->
         <div class="flex items-center justify-end gap-4">
           <div class="hidden md:flex items-center gap-2">
-            <a href="signin.html" class="text-sm text-gray-800">Sign in</a>
+            <a href="/src/pages/signin.html" class="text-sm text-gray-800">Sign in</a>
             <span class="text-gray-300">/</span>
-            <a href="signup.html" class="text-sm text-gray-500">Sign up</a>
+            <a href="/src/pages/signup.html" class="text-sm text-gray-500">Sign up</a>
           </div>
           <a href="#" class="flex items-center gap-1 text-sm">
             <span class="hidden md:inline-block">Cart</span>
@@ -68,8 +68,8 @@
     <nav class="hidden md:block bg-white shadow-md border-t">
       <div class="max-w-[85rem] mx-auto px-4">
         <div class="flex justify-center gap-10 py-3">
-          <a href="index.html" class="font-medium text-sm text-gray-800 hover:underline">HOME</a>
-          <a href="shop.html" class="font-bold text-sm text-gray-800 underline">SHOP</a>
+          <a href="/src/index.html" class="font-medium text-sm text-gray-800 hover:underline">HOME</a>
+          <a href="/src/pages/shop.html" class="font-bold text-sm text-gray-800 underline">SHOP</a>
           <a href="#" class="font-medium text-sm text-gray-800 hover:underline">STORIES</a>
           <a href="#" class="font-medium text-sm text-gray-800 hover:underline">ABOUT</a>
         </div>
@@ -109,17 +109,17 @@
 
         <!-- Mobile Nav Links -->
         <div class="space-y-2">
-          <a href="index.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">HOME</a>
-          <a href="shop.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">SHOP</a>
+          <a href="/src/index.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">HOME</a>
+          <a href="/src/pages/shop.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">SHOP</a>
           <a href="#" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
           <a href="#" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">ABOUT</a>
         </div>
 
         <!-- Mobile Auth -->
         <div class="flex items-center gap-2 pt-4 mt-4 border-t border-gray-200">
-          <a href="#" class="text-sm text-gray-800">Sign in</a>
+          <a href="signin.html" class="text-sm text-gray-800">Sign in</a>
           <span class="text-gray-300">/</span>
-          <a href="#" class="text-sm text-gray-500">Sign up</a>
+          <a href="signup.html" class="text-sm text-gray-500">Sign up</a>
         </div>
       </div>
     </div>
@@ -127,14 +127,14 @@
 
   <!-- HEADER TITLE -->
   <div class="relative w-full h-40 md:h-56 lg:h-80 flex items-center justify-center bg-cover bg-center"
-    style="background-image: url('../public/assets/bg-header.jpg');">
+    style="background-image: url('/public/assets/bg-header.jpg');">
     <!-- Konten Header -->
     <div class="relative text-center text-white px-4">
       <h1 class="text-3xl md:text-5xl font-bold">Detail Product</h1>
       <nav class="mt-2 text-sm md:text-base font-light">
-        <a href="index.html" class="text-gray-200 hover:underline">Home</a>
+        <a href="/src/index.html" class="text-gray-200 hover:underline">Home</a>
         <span class="mx-2">→</span>
-        <a href="shop.html" class="text-gray-200 hover:underline">Shop</a>
+        <a href="/src/pages/shop.html" class="text-gray-200 hover:underline">Shop</a>
         <span class="mx-2">→</span>
         <span class="text-gray-100 font-bold">Detail Product</span>
       </nav>
@@ -149,26 +149,26 @@
         <!-- Product Image -->
         <div>
           <div class="relative">
-            <img id="mainImage" src="../public/assets/img_slide_1.webp" alt="Product Image"
+            <img id="mainImage" src="/public/assets/img_slide_1.webp" alt="Product Image"
               class="w-full h-auto rounded-lg">
           </div>
           <!-- Thumbnails -->
           <div class="flex gap-3 justify-start mt-4 flex-wrap">
-            <img onclick="changeImage(this)" src="../public/assets/img_slide_1.webp"
+            <img onclick="changeImage(this)" src="/public/assets/img_slide_1.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="../public/assets/img_slide_2.webp"
+            <img onclick="changeImage(this)" src="/public/assets/img_slide_2.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="../public/assets/img_slide_3.webp"
+            <img onclick="changeImage(this)" src="/public/assets/img_slide_3.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="../public/assets/img_slide_1.webp"
+            <img onclick="changeImage(this)" src="/public/assets/img_slide_1.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="../public/assets/img_slide_1.webp"
+            <img onclick="changeImage(this)" src="/public/assets/img_slide_1.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="../public/assets/img_slide_2.webp"
+            <img onclick="changeImage(this)" src="/public/assets/img_slide_2.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="../public/assets/img_slide_3.webp"
+            <img onclick="changeImage(this)" src="/public/assets/img_slide_3.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="../public/assets/img_slide_1.webp"
+            <img onclick="changeImage(this)" src="/public/assets/img_slide_1.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
           </div>
         </div>
@@ -261,7 +261,7 @@
     <div class="container mx-auto px-6 text-center space-y-6">
       <!-- Logo & Description -->
       <div class="text-gray-600 max-w-2xl mx-auto">
-        <img src="../public/assets/Sidnov-Logo.png" alt="SIDNOV INDONESIA" class="mx-auto mb-4 w-20">
+        <img src="/public/assets/Sidnov-Logo.png" alt="SIDNOV INDONESIA" class="mx-auto mb-4 w-20">
         <p class="text-sm">
           Handmade Bags with a Cultural Touch!
         </p>
@@ -271,8 +271,8 @@
       <div>
         <h3 class="text-lg font-semibold text-gray-800">Quick Links</h3>
         <div class="flex justify-center space-x-6 mt-4">
-          <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
-          <a href="shop.html" class="text-gray-600 hover:text-gray-900 transition">Shop</a>
+          <a href="/src/index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+          <a href="/src/pages/shop.html" class="text-gray-600 hover:text-gray-900 transition">Shop</a>
           <a href="#" class="text-gray-600 hover:text-gray-900 transition">Stories</a>
           <a href="#" class="text-gray-600 hover:text-gray-900 transition">About</a>
         </div>
@@ -298,7 +298,7 @@
     }
   </script>
   <!-- Preline Library -->
-  <script src="../public/js/preline.js"></script>
+  <script src="/public/js/preline.js"></script>
 </body>
 
 </html>

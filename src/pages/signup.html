@@ -4,29 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In - SIDNOV INDONESIA</title>
-  <link href="./output.css" rel="stylesheet">
+  <title>Sign Up - SIDNOV INDONESIA</title>
+  <link href="/src/output.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="min-h-screen lg:h-screen flex">
+  <div class="min-h-screen lg:h-screen l flex flex-row-reverse">
     <!-- Login Section -->
     <div class="sm:h-full flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-8 xl:px-20">
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <!-- Logo -->
-        <a href="index.html" class="w-16 h-16 mx-auto flex items-center justify-center">
-          <img src="../public/assets/Sidnov-Logo.png" alt="">
+        <a href="/src/index.html" class="w-16 h-16 mx-auto flex items-center justify-center">
+          <img src="/public/assets/Sidnov-Logo.png" alt="">
         </a>
 
         <!-- Title -->
         <h2 class="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-800">
-          Log in & Elevate Your Style 👋
+          Sign Up & Upgrade Your Style ✨
         </h2>
       </div>
 
       <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <!-- Login Form -->
         <form class="space-y-6" action="#" method="POST">
+          <div>
+            <label for="fullname" class="block text-sm font-medium leading-6 text-gray-800">
+              Full Name
+            </label>
+            <div class="mt-2">
+              <input id="fullname" name="fullname" type="text" autocomplete="fullname" required
+                class="block w-full rounded-md border-0 px-3 py-1.5 text-gray-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-800 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+
           <div>
             <label for="email" class="block text-sm font-medium leading-6 text-gray-800">
               Email address
@@ -57,7 +67,7 @@
           <div>
             <button type="submit"
               class="flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-graybg-gray-800">
-              Sign In
+              Sign Up
             </button>
           </div>
         </form>
@@ -98,9 +108,9 @@
 
         <!-- Sign up link -->
         <p class="mt-10 text-center text-sm text-gray-500">
-          Don't have an account yet?
-          <a href="signup.html" class="font-semibold leading-6 text-blue-600 hover:text-blue-500">
-            Sign up here
+          Already have an account?
+          <a href="signin.html" class="font-semibold leading-6 text-blue-600 hover:text-blue-500">
+            Sign in here
           </a>
         </p>
       </div>
@@ -109,8 +119,8 @@
     <!-- Image Section -->
     <div class="hidden lg:block lg:w-1/2">
       <img class="h-full w-full object-cover"
-        src="https://images.unsplash.com/photo-1596435163709-b77cb27e49b8?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="person-holding-bouquet-of-flowers">
+        src="https://images.unsplash.com/photo-1621466550398-ac8062907657?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Tote Bag">
     </div>
   </div>
 
