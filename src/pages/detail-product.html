@@ -141,10 +141,10 @@
     </div>
   </div>
   <!-- HEADER TITLE END -->
-  
+
   <!-- PRODUCT DETAIL TOP -->
   <section>
-    <div class="container mx-auto lg:px-12 px-4 mt-24 md:mt-12 pt-20 pb-28">
+    <div class="container mx-auto lg:px-12 px-4 mt-24 md:mt-12 pt-20 pb-24">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-16">
         <!-- Product Image -->
         <div>
@@ -181,13 +181,17 @@
           <p class="text-lg text-gray-500 mt-2">Availability: In Stock</p>
 
           <p class="text-gray-800 mt-8">
-            The Orca Whale Laptop Bag is designed with a modern minimalist aesthetic that blends style with functionality. Its compact yet spacious interior makes it perfect for daily essentials, whether you’re heading to work, attending meetings, or enjoying casual outings. Crafted with durable, water-resistant fabric, this bag ensures your gadgets stay safe in all conditions.
+            The Orca Whale Laptop Bag is designed with a modern minimalist aesthetic that blends style with
+            functionality. Its compact yet spacious interior makes it perfect for daily essentials, whether you’re
+            heading to work, attending meetings, or enjoying casual outings. Crafted with durable, water-resistant
+            fabric, this bag ensures your gadgets stay safe in all conditions.
           </p>
 
           <div class="mt-6 flex flex-col space-y-3 w-1/2">
             <div>
               <label for="quantity" class="block text-gray-600">Quantity</label>
-              <input type="number" id="quantity" min="1" value="1" class="w-16 p-2 rounded mt-2 focus:border focus:border-gray-800 focus:ring-gray-800">
+              <input type="number" id="quantity" min="1" value="1"
+                class="w-16 p-2 rounded mt-2 focus:border focus:border-gray-800 focus:ring-gray-800">
             </div>
             <button
               class="px-8 py-2 border border-gray-800 bg-gray-800 hover:opacity-85 hover:border-gray-800 text-white transition w-full mx-auto lg:mx-0">
@@ -203,6 +207,192 @@
     </div>
   </section>
   <!-- PRODUCT DETAIL TOP END-->
+
+  <!-- DETAIL BOTTOM -->
+  <section>
+    <div class="container mx-auto lg:px-12 px-4 pb-28">
+      <div class="bg-[#F4F4F4]">
+        <nav class="-mb-0.5 flex justify-center gap-x-6" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+          <button type="button"
+            class="hs-tab-active:font-semibold hs-tab-active:border-gray-800 hs-tab-active:text-gray-800 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-gray-800 focus:outline-none focus:text-gray-800 disabled:opacity-50 disabled:pointer-events-none active"
+            id="horizontal-alignment-item-1" aria-selected="true" data-hs-tab="#horizontal-alignment-1"
+            aria-controls="horizontal-alignment-1" role="tab">
+            Description
+          </button>
+          <button type="button"
+            class="hs-tab-active:font-semibold hs-tab-active:border-gray-800 hs-tab-active:text-gray-800 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-gray-800 focus:outline-none focus:text-gray-800 disabled:opacity-50 disabled:pointer-events-none"
+            id="horizontal-alignment-item-2" aria-selected="false" data-hs-tab="#horizontal-alignment-2"
+            aria-controls="horizontal-alignment-2" role="tab">
+            Reviews
+          </button>
+        </nav>
+      </div>
+
+      <div class="border border-gray-200">
+        <!-- Description Tab -->
+        <div id="horizontal-alignment-1" role="tabpanel" aria-labelledby="horizontal-alignment-item-1"
+          class="px-8 pt-10 pb-16 text-gray-800">
+          <h3 class="text-lg font-bold">FEATURES:</h3>
+          <ul class="list-disc">
+            <li>Padded laptop compartment to protect devices up to 15 inches.</li>
+            <li>Adjustable and detachable shoulder strap for versatile carrying options.</li>
+            <li>Multiple inner pockets for better organization of your essentials.</li>
+            <li>Comes with a dust bag made from 100% pure cotton textile</li>
+          </ul>
+
+          <h3 class="mt-4 text-lg font-bold">MATERIALS:</h3>
+          <p>Crafted from eco-friendly, water-resistant polyester fabric with high durability. The exterior features
+            hand-printed designs using non-toxic, water-based inks, while the interior lining is made from recycled PET
+            materials. All components are free from harmful chemicals, ensuring safety for both the user and the
+            environment.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deserunt hic reiciendis et adipisci
+            repudiandae aspernatur, quidem tenetur nemo consequatur quisquam perferendis sunt voluptatum error,
+            temporibus, totam excepturi! Dolore quod at fuga culpa consequuntur veniam repellat architecto illo dolorem,
+            quas harum iusto assumenda aliquam reiciendis quam sint distinctio fugit odio perspiciatis eum ipsa
+            quibusdam! Sint?</p>
+
+          <h3 class="mt-4 text-lg font-bold">DIMENSIONS:</h3>
+          <ul class="list-disc">
+            <li>23 x 7 x 16 cm</li>
+            <li>9.05 x 2.8 x 6.3 in</li>
+          </ul>
+
+          <h3 class="mt-4 text-lg font-bold">WEIGHT:</h3>
+          <ul class="list-disc">
+            <li>0.20 kg</li>
+          </ul>
+        </div>
+
+        <!-- Reviews Tab -->
+        <div id="horizontal-alignment-2" role="tabpanel" aria-labelledby="horizontal-alignment-item-2"
+          class="hidden px-8 pb-16 text-gray-800">
+          <div class="py-4 sm:py-6">
+            <!-- Overall Rating Section -->
+            <div class="bg-[#F4F4F4] py-6 sm:py-8 text-center mb-6 sm:mb-8 mx-2 rounded-md">
+              <h2 class="text-xl sm:text-2xl font-medium mb-1">Overall</h2>
+              <div class="text-5xl sm:text-6xl font-bold text-amber-500 mb-1">4.0</div>
+              <div class="text-sm sm:text-base text-gray-500">(03 Reviews)</div>
+            </div>
+
+            <!-- Individual Reviews -->
+            <!-- Review 1 -->
+            <div class="border-b pb-6 mb-6 px-2 sm:px-4">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <img src="https://down-id.img.susercontent.com/file/d387cc63a3f9adfced5a874a4d2a4e08_tn" alt="fatimah1592"
+                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+                <div class="w-full">
+                  <div class="font-medium text-sm sm:text-base">fatimah1592</div>
+                  <div class="flex text-amber-500 my-1 lg:text-2xl sm:text-base">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-gray-300">★</span>
+                  </div>
+                  <div class="text-xs sm:text-sm text-gray-500">2024-02-20 07:23</div>
+
+                  <div class="mt-2 sm:mt-3 text-sm sm:text-base space-y-1">
+                    <p>Barang sdh di terima dgn baik,sesuai gambar,tas bs muat barang banyak dan sangat ringan makasih seller dan pak kurir 🙏☺️</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="border-b pb-6 mb-6 px-2 sm:px-4">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <img src="https://down-id.img.susercontent.com/file/360fbab38e57bbf6fba55a5c8428f177_tn" alt="fatimah1592"
+                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+                <div class="w-full">
+                  <div class="font-medium text-sm sm:text-base">febrianih88</div>
+                  <div class="flex text-amber-500 my-1 lg:text-2xl sm:text-base">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-gray-300">★</span>
+                  </div>
+                  <div class="text-xs sm:text-sm text-gray-500">2024-02-20 07:23</div>
+
+                  <div class="mt-2 sm:mt-3 text-sm sm:text-base space-y-1">
+                    <p>Alhamdulillah ibu sukaa, tas nya bagus cuman kukira agakk besar gitu tasnya ternyata enggak</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="pb-8 px-2 sm:px-4">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <img src="https://down-id.img.susercontent.com/file/id-11134233-7rasf-m3dgi75pjx0425_tn" alt="fatimah1592"
+                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+                <div class="w-full">
+                  <div class="font-medium text-sm sm:text-base">sulastri1222</div>
+                  <div class="flex text-amber-500 my-1 lg:text-2xl sm:text-base">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-gray-300">★</span>
+                  </div>
+                  <div class="text-xs sm:text-sm text-gray-500">2024-02-20 07:23</div>
+
+                  <div class="mt-2 sm:mt-3 text-sm sm:text-base space-y-1">
+                    <p>Terima kasih barang sudah sampai ya seller, Warnanya cantik bagus banget realpick dengan harga segitu udah tas kayak gini</p>
+                    <p>Rekomended banget dipakek tiap hari pun ok banget, sekali lagi terima kasih..Bang kurir, seller, and happy shopping 💝</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-6">
+              <nav class="flex items-center gap-x-1" aria-label="Pagination">
+                <button type="button"
+                  class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+                  aria-label="Previous">
+                  <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6"></path>
+                  </svg>
+                  <span class="sr-only">Previous</span>
+                </button>
+                <div class="flex items-center gap-x-1">
+                  <button type="button"
+                    class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-200 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                    aria-current="page">1</button>
+                  <button type="button"
+                    class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">2</button>
+                  <button type="button"
+                    class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">3</button>
+                  <div class="hs-tooltip inline-block">
+                    <button type="button"
+                      class="hs-tooltip-toggle group min-h-[38px] min-w-[38px] flex justify-center items-center text-gray-400 hover:text-blue-600 p-2 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">
+                      <span class="group-hover:hidden text-xs">•••</span>
+                      <svg class="group-hover:block hidden shrink-0 size-5" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 17 5-5-5-5"></path>
+                        <path d="m13 17 5-5-5-5"></path>
+                      </svg>
+                      <span
+                        class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded shadow-sm"
+                        role="tooltip">
+                        Next 4 pages
+                      </span>
+                    </button>
+                  </div>
+                  <button type="button"
+                    class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">8</button>
+                </div>
+                <button type="button"
+                  class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+                  aria-label="Next">
+                  <span class="sr-only">Next</span>
+                  <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"></path>
+                  </svg>
+                </button>
+              </nav>
+            </div>
+            <!-- End Pagination -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- DETAIL BOTTOM END -->
 
   <!-- FOOTER -->
   <footer class="w-full bg-white border-gray-300 py-10">

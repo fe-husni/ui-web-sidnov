@@ -169,7 +169,7 @@
       </div>
 
       <!-- Product grid -->
-      <div class="flex-1">
+      <div class="flex-1 flex flex-col gap-y-24 items-center">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-12 xl:gap-x-8">
           <!-- Product Card -->
           <div class="group relative overflow-hidden rounded-md product-card square_bag">
@@ -420,7 +420,89 @@
               </div>
             </div>
           </div>
+          <div class="group relative overflow-hidden rounded-md product-card laptop_bag">
+            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+              <img src="/public/assets/new_product_7.webp" alt="Front of men's Basic Tee in black."
+                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
+            </div>
+            <div class="mt-6 flex gap-6 flex-col justify-between">
+              <div>
+                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Laptop Bag - "Elegant Noir" Pattern
+                  </a>
+                </h3>
+                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 265.000</p>
+              </div>
+              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
+                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                </a>
+                <a href="detail-product.html"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
+                  <span class="icon-[solar--eye-outline] text-3xl"></span>
+                </a>
+                <a href="#"
+                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
+                  <span class="icon-[solar--heart-outline] text-3xl"></span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Pagination -->
+        <nav class="flex items-center gap-x-1" aria-label="Pagination">
+          <button type="button"
+            class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+            aria-label="Previous">
+            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </button>
+          <div class="flex items-center gap-x-1">
+            <button type="button"
+              class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-200 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+              aria-current="page">1</button>
+            <button type="button"
+              class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">2</button>
+            <button type="button"
+              class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">3</button>
+            <div class="hs-tooltip inline-block">
+              <button type="button"
+                class="hs-tooltip-toggle group min-h-[38px] min-w-[38px] flex justify-center items-center text-gray-400 hover:text-blue-600 p-2 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">
+                <span class="group-hover:hidden text-xs">•••</span>
+                <svg class="group-hover:block hidden shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 17 5-5-5-5"></path>
+                  <path d="m13 17 5-5-5-5"></path>
+                </svg>
+                <span
+                  class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded shadow-sm"
+                  role="tooltip">
+                  Next 4 pages
+                </span>
+              </button>
+            </div>
+            <button type="button"
+              class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">8</button>
+          </div>
+          <button type="button"
+            class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+            aria-label="Next">
+            <span class="sr-only">Next</span>
+            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </button>
+        </nav>
+        <!-- End Pagination -->
       </div>
     </div>
   </div>
