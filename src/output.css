@@ -993,6 +993,10 @@ html{
   margin-bottom: 0.25rem;
 }
 
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -1007,6 +1011,10 @@ html{
 
 .mb-6{
   margin-bottom: 1.5rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .ml-1{
@@ -1095,6 +1103,10 @@ html{
   display: none;
 }
 
+.aspect-\[3\/4\]{
+  aspect-ratio: 3/4;
+}
+
 .aspect-square{
   aspect-ratio: 1 / 1;
 }
@@ -1167,10 +1179,6 @@ html{
 
 .h-6{
   height: 1.5rem;
-}
-
-.h-64{
-  height: 16rem;
 }
 
 .h-8{
@@ -1262,6 +1270,10 @@ html{
   max-width: 42rem;
 }
 
+.max-w-3xl{
+  max-width: 48rem;
+}
+
 .max-w-\[300px\]{
   max-width: 300px;
 }
@@ -1272,6 +1284,10 @@ html{
 
 .max-w-full{
   max-width: 100%;
+}
+
+.max-w-none{
+  max-width: none;
 }
 
 .max-w-xs{
@@ -1457,8 +1473,17 @@ html{
        column-gap: 1.5rem;
 }
 
+.gap-x-8{
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
 .gap-y-12{
   row-gap: 3rem;
+}
+
+.gap-y-20{
+  row-gap: 5rem;
 }
 
 .gap-y-24{
@@ -1874,6 +1899,10 @@ html{
   padding-bottom: 2rem;
 }
 
+.pb-\[133\.33\%\]{
+  padding-bottom: 133.33%;
+}
+
 .pe-4{
   padding-inline-end: 1rem;
 }
@@ -1908,6 +1937,10 @@ html{
 
 .text-center{
   text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .text-end{
@@ -2007,6 +2040,10 @@ html{
   text-transform: lowercase;
 }
 
+.italic{
+  font-style: italic;
+}
+
 .leading-6{
   line-height: 1.5rem;
 }
@@ -2085,11 +2122,6 @@ html{
 .text-green-600{
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity, 1));
-}
-
-.text-indigo-600{
-  --tw-text-opacity: 1;
-  color: rgb(79 70 229 / var(--tw-text-opacity, 1));
 }
 
 .text-red-600{
@@ -2315,9 +2347,14 @@ html{
   color: rgb(17 24 39 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-indigo-800:hover{
+.hover\:text-green-500:hover{
   --tw-text-opacity: 1;
-  color: rgb(55 48 163 / var(--tw-text-opacity, 1));
+  color: rgb(34 197 94 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-pink-500:hover{
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover{
@@ -2622,6 +2659,10 @@ html{
 }
 
 @media (min-width: 768px){
+  .md\:mb-0{
+    margin-bottom: 0px;
+  }
+
   .md\:mt-12{
     margin-top: 3rem;
   }
@@ -2750,6 +2791,10 @@ html{
 
   .lg\:w-1\/2{
     width: 50%;
+  }
+
+  .lg\:w-3\/4{
+    width: 75%;
   }
 
   .lg\:w-64{
