@@ -112,7 +112,8 @@
         <div class="space-y-2">
           <a href="/src/index.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">HOME</a>
           <a href="/src/pages/shop.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">SHOP</a>
-          <a href="/src/pages/stories.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
+          <a href="/src/pages/stories.html"
+            class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
           <a href="#" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">ABOUT</a>
         </div>
 
@@ -149,27 +150,41 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-16">
         <!-- Product Image -->
         <div>
-          <div class="relative">
-            <img id="mainImage" src="/public/assets/img_slide_1.webp" alt="Product Image"
-              class="w-full h-auto rounded-lg">
+          <!-- Container untuk gambar utama -->
+          <div class="relative overflow-hidden">
+            <div id="imageContainer" class="flex transition-transform duration-300">
+              <img src="/public/assets/img_slide_1.webp" alt="Product Image 1" loading="lazy"
+                class="w-full h-auto rounded-lg flex-shrink-0">
+              <img src="/public/assets/img_slide_2.webp" alt="Product Image 2" loading="lazy"
+                class="w-full h-auto rounded-lg flex-shrink-0">
+              <img src="/public/assets/img_slide_3.webp" alt="Product Image 3" loading="lazy"
+                class="w-full h-auto rounded-lg flex-shrink-0">
+              <img src="/public/assets/img_slide_1.webp" alt="Product Image 4" loading="lazy"
+                class="w-full h-auto rounded-lg flex-shrink-0">
+              <img src="/public/assets/img_slide_2.webp" alt="Product Image 5" loading="lazy"
+                class="w-full h-auto rounded-lg flex-shrink-0">
+              <img src="/public/assets/img_slide_3.webp" alt="Product Image 6" loading="lazy"
+                class="w-full h-auto rounded-lg flex-shrink-0">
+              <img src="/public/assets/img_slide_1.webp" alt="Product Image 7" loading="lazy"
+                class="w-full h-auto rounded-lg flex-shrink-0">
+            </div>
           </div>
+
           <!-- Thumbnails -->
           <div class="flex gap-3 justify-start mt-4 flex-wrap">
-            <img onclick="changeImage(this)" src="/public/assets/img_slide_1.webp"
+            <img onclick="changeImage(0)" loading="lazy" src="/public/assets/img_slide_1.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="/public/assets/img_slide_2.webp"
+            <img onclick="changeImage(1)" loading="lazy" src="/public/assets/img_slide_2.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="/public/assets/img_slide_3.webp"
+            <img onclick="changeImage(2)" loading="lazy" src="/public/assets/img_slide_3.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="/public/assets/img_slide_1.webp"
+            <img onclick="changeImage(3)" loading="lazy" src="/public/assets/img_slide_1.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="/public/assets/img_slide_1.webp"
+            <img onclick="changeImage(4)" loading="lazy" src="/public/assets/img_slide_2.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="/public/assets/img_slide_2.webp"
+            <img onclick="changeImage(5)" loading="lazy" src="/public/assets/img_slide_3.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="/public/assets/img_slide_3.webp"
-              class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
-            <img onclick="changeImage(this)" src="/public/assets/img_slide_1.webp"
+            <img onclick="changeImage(6)" loading="lazy" src="/public/assets/img_slide_1.webp"
               class="thumbnail w-16 h-16 object-cover cursor-pointer rounded border-2 border-gray-200 hover:border-gray-400">
           </div>
         </div>
@@ -242,11 +257,13 @@
           </ul>
 
           <h3 class="mt-4 text-lg font-bold">MATERIALS:</h3>
-          <p class="text-sm sm:text-base">Crafted from eco-friendly, water-resistant polyester fabric with high durability. The exterior features
+          <p class="text-sm sm:text-base">Crafted from eco-friendly, water-resistant polyester fabric with high
+            durability. The exterior features
             hand-printed designs using non-toxic, water-based inks, while the interior lining is made from recycled PET
             materials. All components are free from harmful chemicals, ensuring safety for both the user and the
             environment.</p>
-          <p class="text-sm sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deserunt hic reiciendis et adipisci
+          <p class="text-sm sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deserunt hic
+            reiciendis et adipisci
             repudiandae aspernatur, quidem tenetur nemo consequatur quisquam perferendis sunt voluptatum error,
             temporibus, totam excepturi! Dolore quod at fuga culpa consequuntur veniam repellat architecto illo dolorem,
             quas harum iusto assumenda aliquam reiciendis quam sint distinctio fugit odio perspiciatis eum ipsa
@@ -266,7 +283,7 @@
 
         <!-- Reviews Tab -->
         <div id="horizontal-alignment-2" role="tabpanel" aria-labelledby="horizontal-alignment-item-2"
-          class="hidden px-8 pb-16 text-gray-800">
+          class="hidden px-2 lg:px-8 pb-16 text-gray-800">
           <div class="py-4 sm:py-6">
             <!-- Overall Rating Section -->
             <div class="bg-[#F4F4F4] py-6 sm:py-8 text-center mb-6 sm:mb-8 mx-2 rounded-md">
@@ -279,8 +296,8 @@
             <!-- Review 1 -->
             <div class="border-b pb-6 mb-6 px-2 sm:px-4">
               <div class="flex items-start gap-3 sm:gap-4">
-                <img src="https://down-id.img.susercontent.com/file/d387cc63a3f9adfced5a874a4d2a4e08_tn" alt="fatimah1592"
-                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+                <img src="https://down-id.img.susercontent.com/file/d387cc63a3f9adfced5a874a4d2a4e08_tn"
+                  alt="fatimah1592" class="rounded-full w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
                 <div class="w-full">
                   <div class="font-medium text-sm sm:text-base">fatimah1592</div>
                   <div class="flex text-amber-500 my-1 lg:text-2xl sm:text-base">
@@ -289,7 +306,8 @@
                   <div class="text-xs sm:text-sm text-gray-500">2024-02-20 07:23</div>
 
                   <div class="mt-2 sm:mt-3 text-sm sm:text-base space-y-1">
-                    <p>Barang sdh di terima dgn baik,sesuai gambar,tas bs muat barang banyak dan sangat ringan makasih seller dan pak kurir 🙏☺️</p>
+                    <p>Barang sdh di terima dgn baik,sesuai gambar,tas bs muat barang banyak dan sangat ringan makasih
+                      seller dan pak kurir 🙏☺️</p>
                   </div>
                 </div>
               </div>
@@ -298,8 +316,8 @@
             <!-- Review 2 -->
             <div class="border-b pb-6 mb-6 px-2 sm:px-4">
               <div class="flex items-start gap-3 sm:gap-4">
-                <img src="https://down-id.img.susercontent.com/file/360fbab38e57bbf6fba55a5c8428f177_tn" alt="fatimah1592"
-                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+                <img src="https://down-id.img.susercontent.com/file/360fbab38e57bbf6fba55a5c8428f177_tn"
+                  alt="fatimah1592" class="rounded-full w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
                 <div class="w-full">
                   <div class="font-medium text-sm sm:text-base">febrianih88</div>
                   <div class="flex text-amber-500 my-1 lg:text-2xl sm:text-base">
@@ -317,8 +335,8 @@
             <!-- Review 3 -->
             <div class="pb-8 px-2 sm:px-4">
               <div class="flex items-start gap-3 sm:gap-4">
-                <img src="https://down-id.img.susercontent.com/file/id-11134233-7rasf-m3dgi75pjx0425_tn" alt="fatimah1592"
-                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+                <img src="https://down-id.img.susercontent.com/file/id-11134233-7rasf-m3dgi75pjx0425_tn"
+                  alt="fatimah1592" class="rounded-full w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
                 <div class="w-full">
                   <div class="font-medium text-sm sm:text-base">sulastri1222</div>
                   <div class="flex text-amber-500 my-1 lg:text-2xl sm:text-base">
@@ -327,8 +345,10 @@
                   <div class="text-xs sm:text-sm text-gray-500">2024-02-20 07:23</div>
 
                   <div class="mt-2 sm:mt-3 text-sm sm:text-base space-y-1">
-                    <p>Terima kasih barang sudah sampai ya seller, Warnanya cantik bagus banget realpick dengan harga segitu udah tas kayak gini</p>
-                    <p>Rekomended banget dipakek tiap hari pun ok banget, sekali lagi terima kasih..Bang kurir, seller, and happy shopping 💝</p>
+                    <p>Terima kasih barang sudah sampai ya seller, Warnanya cantik bagus banget realpick dengan harga
+                      segitu udah tas kayak gini</p>
+                    <p>Rekomended banget dipakek tiap hari pun ok banget, sekali lagi terima kasih..Bang kurir, seller,
+                      and happy shopping 💝</p>
                   </div>
                 </div>
               </div>
@@ -486,6 +506,64 @@
     function changeImage(element) {
       document.getElementById("mainImage").src = element.src;
     }
+
+    let currentIndex = 0;
+    const imageContainer = document.getElementById('imageContainer');
+    const images = document.querySelectorAll('#imageContainer img');
+    const totalImages = images.length;
+
+    // Variabel untuk menyimpan posisi awal touch
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    // Fungsi untuk menggeser gambar
+    function slideTo(index) {
+      if (index < 0 || index >= totalImages) return;
+      currentIndex = index;
+      const offset = -currentIndex * 100;
+      imageContainer.style.transform = `translateX(${offset}%)`;
+
+      // Update thumbnail aktif
+      document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+        if (i === currentIndex) {
+          // Tambahkan border aktif
+          thumb.style.borderColor = '#1f2937'; // Warna border aktif
+        } else {
+          // Hapus border aktif
+          thumb.style.borderColor = ''; // Kembalikan ke default
+        }
+      });
+    }
+
+    // Fungsi untuk mengubah gambar saat thumbnail diklik
+    function changeImage(index) {
+      slideTo(index);
+    }
+
+    // Event listener untuk swipe
+    imageContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX; // Simpan posisi awal touch
+    });
+
+    imageContainer.addEventListener('touchmove', (e) => {
+      touchEndX = e.touches[0].clientX; // Simpan posisi saat ini
+    });
+
+    imageContainer.addEventListener('touchend', () => {
+      const swipeThreshold = 50; // Jarak minimal untuk dianggap sebagai swipe
+      const swipeDistance = touchEndX - touchStartX;
+
+      if (swipeDistance > swipeThreshold) {
+        // Swipe ke kiri (geser ke gambar sebelumnya)
+        slideTo(currentIndex - 1);
+      } else if (swipeDistance < -swipeThreshold) {
+        // Swipe ke kanan (geser ke gambar berikutnya)
+        slideTo(currentIndex + 1);
+      }
+    });
+
+    // Inisialisasi: Set thumbnail pertama sebagai aktif
+    document.querySelector('.thumbnail').style.borderColor = '#1f2937'; // Warna border aktif
   </script>
   <!-- Preline Library -->
   <script src="/public/js/preline.js"></script>
