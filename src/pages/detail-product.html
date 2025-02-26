@@ -112,8 +112,7 @@
         <div class="space-y-2">
           <a href="../index.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">HOME</a>
           <a href="shop.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">SHOP</a>
-          <a href="stories.html"
-            class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
+          <a href="stories.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
           <a href="#" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">ABOUT</a>
         </div>
 
@@ -292,6 +291,22 @@
               <div class="text-sm sm:text-base text-gray-500">(03 Reviews)</div>
             </div>
 
+
+            <!-- Popup Overlay -->
+            <div id="popup-overlay"
+              class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+              <!-- Popup Content -->
+              <div class="bg-white rounded-lg w-full max-w-lg overflow-hidden">
+                <!-- Image Container with 3:4 Aspect Ratio -->
+                <div class="aspect-[3/4] w-full relative">
+                  <img id="popup-image" src="" alt="Popup Image" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <!-- Close Button -->
+                <button id="close-popup"
+                  class="w-full bg-red-500 text-white py-2 sm:py-3 text-sm sm:text-base">Close</button>
+              </div>
+            </div>
+
             <!-- Individual Reviews -->
             <!-- Review 1 -->
             <div class="border-b pb-6 mb-6 px-2 sm:px-4">
@@ -308,6 +323,18 @@
                   <div class="mt-2 sm:mt-3 text-sm sm:text-base space-y-1">
                     <p>Barang sdh di terima dgn baik,sesuai gambar,tas bs muat barang banyak dan sangat ringan makasih
                       seller dan pak kurir 🙏☺️</p>
+                  </div>
+                  <div class="mt-2 flex-wrap grid grid-cols-4 md:grid-cols-6 lg:grid-cols-10 gap-2 w-full lg:w-9/12">
+                    <img src="../../public/assets/review_img_1.webp" alt="review" class="aspect-[1/1] object-cover cursor-pointer"
+                      onclick="showPopup('../../public/assets/review_img_1.webp')">
+                    <img src="../../public/assets/review_img_2.webp" alt="review" class="aspect-[1/1] object-cover cursor-pointer"
+                      onclick="showPopup('../../public/assets/review_img_2.webp')">
+                    <img src="../../public/assets/review_img_3.webp" alt="review" class="aspect-[1/1] object-cover cursor-pointer"
+                      onclick="showPopup('../../public/assets/review_img_3.webp')">
+                    <img src="../../public/assets/review_img_4.webp" alt="review" class="aspect-[1/1] object-cover cursor-pointer"
+                      onclick="showPopup('../../public/assets/review_img_4.webp')">
+                    <img src="../../public/assets/review_img_1.webp" alt="review" class="aspect-[1/1] object-cover cursor-pointer"
+                      onclick="showPopup('../../public/assets/review_img_1.webp')">
                   </div>
                 </div>
               </div>
@@ -327,6 +354,10 @@
 
                   <div class="mt-2 sm:mt-3 text-sm sm:text-base space-y-1">
                     <p>Alhamdulillah ibu sukaa, tas nya bagus cuman kukira agakk besar gitu tasnya ternyata enggak</p>
+                  </div>
+                  <div class="mt-2 flex-wrap grid grid-cols-4 md:grid-cols-6 lg:grid-cols-10 gap-2 w-full lg:w-9/12">
+                    <img src="../../public/assets/review_img_1.webp" alt="review" class="aspect-[1/1] object-cover cursor-pointer"
+                      onclick="showPopup('../../public/assets/review_img_1.webp')">
                   </div>
                 </div>
               </div>
@@ -349,6 +380,12 @@
                       segitu udah tas kayak gini</p>
                     <p>Rekomended banget dipakek tiap hari pun ok banget, sekali lagi terima kasih..Bang kurir, seller,
                       and happy shopping 💝</p>
+                  </div>
+                  <div class="mt-2 flex-wrap grid grid-cols-4 md:grid-cols-6 lg:grid-cols-10 gap-2 w-full lg:w-9/12">
+                    <img src="../../public/assets/review_img_1.webp" alt="review" class="aspect-[1/1] object-cover cursor-pointer"
+                      onclick="showPopup('../../public/assets/review_img_1.webp')">
+                    <img src="../../public/assets/review_img_2.webp" alt="review" class="aspect-[1/1] object-cover cursor-pointer"
+                      onclick="showPopup('../../public/assets/review_img_2.webp')">
                   </div>
                 </div>
               </div>
@@ -564,6 +601,35 @@
 
     // Inisialisasi: Set thumbnail pertama sebagai aktif
     document.querySelector('.thumbnail').style.borderColor = '#1f2937'; // Warna border aktif
+
+    // Pop Up Review Image
+    function showPopup(imageSrc) {
+      const popupOverlay = document.getElementById('popup-overlay');
+      const popupImage = document.getElementById('popup-image');
+
+      // Set image source
+      popupImage.src = imageSrc;
+
+      // Show popup
+      popupOverlay.classList.remove('hidden');
+    }
+
+    function closePopup() {
+      const popupOverlay = document.getElementById('popup-overlay');
+
+      // Hide popup
+      popupOverlay.classList.add('hidden');
+    }
+
+    // Event listener for close button
+    document.getElementById('close-popup').addEventListener('click', closePopup);
+
+    // Event listener for overlay click (close popup when clicking outside the image)
+    document.getElementById('popup-overlay').addEventListener('click', function (event) {
+      if (event.target === this) {
+        closePopup();
+      }
+    });
   </script>
   <!-- Preline Library -->
   <script src="../../public/js/preline.js"></script>
