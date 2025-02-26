@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHOP - SIDNOV INDONESIA</title>
+  <title>WISHLIST - SIDNOV INDONESIA</title>
   <link rel="icon" type="image/x-icon" href="../../public/assets/sidnov-icon.ico">
   <link href="../output.css" rel="stylesheet">
 </head>
@@ -70,7 +70,7 @@
       <div class="max-w-[85rem] mx-auto px-4">
         <div class="flex justify-center gap-10 py-3">
           <a href="../index.html" class="font-medium text-sm text-gray-800 hover:underline">HOME</a>
-          <a href="shop.html" class="font-bold text-sm text-gray-800 underline">SHOP</a>
+          <a href="shop.html" class="font-medium text-sm text-gray-800 hover:underline">SHOP</a>
           <a href="stories.html" class="font-medium text-sm text-gray-800 hover:underline">STORIES</a>
           <a href="#" class="font-medium text-sm text-gray-800 hover:underline">ABOUT</a>
         </div>
@@ -131,48 +131,26 @@
     style="background-image: url('../../public/assets/bg-header.jpg');">
     <!-- Konten Header -->
     <div class="relative text-center text-white px-4">
-      <h1 class="text-3xl md:text-5xl font-bold">Shop</h1>
+      <h1 class="text-3xl md:text-5xl font-bold">All Wishlist</h1>
       <nav class="mt-2 text-sm md:text-base font-light">
         <a href="../index.html" class="text-gray-200 hover:underline">Home</a>
         <span class="mx-2">→</span>
-        <span class="text-gray-100 font-bold">Shop</span>
+        <span class="text-gray-100 font-bold">Wishlist</span>
       </nav>
     </div>
   </div>
   <!-- HEADER TITLE END -->
 
-  <!-- PRODUCT SECTION -->
-  <div class="container mx-auto lg:px-12 px-4 mt-24 mb-24 md:mt-12 pb-28">
-    <!-- Main layout container -->
-    <div class="flex flex-col lg:flex-row gap-8">
-      <!-- Side menu -->
-      <div class="w-full lg:w-64">
-        <div class="bg-gradient-to-r from-stone-900 to-zinc-500 text-white p-4 mb-2">
-          <h2 class="font-bold text-lg">BROWSE CATEGORIES</h2>
+  <!-- WISHLIST SECTION -->
+  <section>
+    <div class="container mx-auto lg:px-12 px-4 mt-12 pb-28">
+      <div class="flex flex-col gap-10 lg:gap-16">
+        <div class="title flex gap-y-4 flex-col md:flex-row justify-between items-center w-full">
+          <h1 class="text-2xl md:text-4xl font-extrabold">8 <span class="font-medium">Items</span></h1>
         </div>
-        <nav class="flex flex-col">
-          <a href="#" class="px-4 py-3 text-gray-600 hover:text-gray-800 whitespace-nowrap border-l-4 border-gray-800">
-            All Categories
-          </a>
-          <a href="#" class="px-4 py-3 text-gray-600 hover:text-gray-800 whitespace-nowrap">
-            Square Bag
-          </a>
-          <a href="#" class="px-4 py-3 text-gray-600 hover:text-gray-800 whitespace-nowrap">
-            Tote Bag
-          </a>
-          <a href="#" class="px-4 py-3 text-gray-600 hover:text-gray-800 whitespace-nowrap">
-            Laptop Bag
-          </a>
-          <a href="#" class="px-4 py-3 text-gray-600 hover:text-gray-800 whitespace-nowrap">
-            Accessories
-          </a>
-        </nav>
-      </div>
 
-      <!-- Product grid -->
-      <div class="flex-1 flex flex-col gap-y-24 items-center">
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-12 xl:gap-x-8">
-          <!-- Product Card -->
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-12 xl:gap-x-8"
+          id="product_container">
           <div class="group relative overflow-hidden rounded-md product-card square_bag">
             <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
               <img src="../../public/assets/new_product_1.webp" alt="Front of men's Basic Tee in black."
@@ -188,10 +166,13 @@
                 </h3>
                 <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 245.000</p>
               </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+              <div class="group-btn flex justify-center items-center flex-wrap gap-2 md:gap-4 transition duration-500">
                 <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  class="px-4 py-2 w-full text-xs md:text-base gap-x-1 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:bg-emerald-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-5 md:h-5 hover:rotate-[360deg] transition duration-500" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4" />
+                  </svg>
+                  Move to Cart
                 </a>
                 <a href="detail-product.html"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
@@ -199,7 +180,9 @@
                 </a>
                 <a href="#"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.088 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -219,10 +202,13 @@
                 </h3>
                 <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 280.000</p>
               </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+              <div class="group-btn flex justify-center items-center flex-wrap gap-2 md:gap-4 transition duration-500">
                 <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  class="px-4 py-2 w-full text-xs md:text-base gap-x-1 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:bg-emerald-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-5 md:h-5 hover:rotate-[360deg] transition duration-500" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4" />
+                  </svg>
+                  Move to Cart
                 </a>
                 <a href="detail-product.html"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
@@ -230,7 +216,9 @@
                 </a>
                 <a href="#"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.088 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -250,10 +238,13 @@
                 </h3>
                 <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 250.000</p>
               </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+              <div class="group-btn flex justify-center items-center flex-wrap gap-2 md:gap-4 transition duration-500">
                 <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  class="px-4 py-2 w-full text-xs md:text-base gap-x-1 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:bg-emerald-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-5 md:h-5 hover:rotate-[360deg] transition duration-500" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4" />
+                  </svg>
+                  Move to Cart
                 </a>
                 <a href="detail-product.html"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
@@ -261,7 +252,9 @@
                 </a>
                 <a href="#"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.088 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -281,10 +274,13 @@
                 </h3>
                 <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 265.000</p>
               </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+              <div class="group-btn flex justify-center items-center flex-wrap gap-2 md:gap-4 transition duration-500">
                 <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  class="px-4 py-2 w-full text-xs md:text-base gap-x-1 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:bg-emerald-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-5 md:h-5 hover:rotate-[360deg] transition duration-500" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4" />
+                  </svg>
+                  Move to Cart
                 </a>
                 <a href="detail-product.html"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
@@ -292,7 +288,9 @@
                 </a>
                 <a href="#"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.088 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -312,10 +310,13 @@
                 </h3>
                 <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 230.000</p>
               </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+              <div class="group-btn flex justify-center items-center flex-wrap gap-2 md:gap-4 transition duration-500">
                 <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  class="px-4 py-2 w-full text-xs md:text-base gap-x-1 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:bg-emerald-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-5 md:h-5 hover:rotate-[360deg] transition duration-500" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4" />
+                  </svg>
+                  Move to Cart
                 </a>
                 <a href="detail-product.html"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
@@ -323,7 +324,9 @@
                 </a>
                 <a href="#"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.088 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -343,10 +346,13 @@
                 </h3>
                 <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 215.000</p>
               </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+              <div class="group-btn flex justify-center items-center flex-wrap gap-2 md:gap-4 transition duration-500">
                 <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  class="px-4 py-2 w-full text-xs md:text-base gap-x-1 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:bg-emerald-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-5 md:h-5 hover:rotate-[360deg] transition duration-500" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4" />
+                  </svg>
+                  Move to Cart
                 </a>
                 <a href="detail-product.html"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
@@ -354,7 +360,9 @@
                 </a>
                 <a href="#"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.088 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -374,10 +382,13 @@
                 </h3>
                 <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 210.000</p>
               </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+              <div class="group-btn flex justify-center items-center flex-wrap gap-2 md:gap-4 transition duration-500">
                 <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  class="px-4 py-2 w-full text-xs md:text-base gap-x-1 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:bg-emerald-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-5 md:h-5 hover:rotate-[360deg] transition duration-500" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4" />
+                  </svg>
+                  Move to Cart
                 </a>
                 <a href="detail-product.html"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
@@ -385,7 +396,9 @@
                 </a>
                 <a href="#"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.088 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -405,10 +418,13 @@
                 </h3>
                 <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 249.000</p>
               </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+              <div class="group-btn flex justify-center items-center flex-wrap gap-2 md:gap-4 transition duration-500">
                 <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  class="px-4 py-2 w-full text-xs md:text-base gap-x-1 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:bg-emerald-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-5 md:h-5 hover:rotate-[360deg] transition duration-500" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4" />
+                  </svg>
+                  Move to Cart
                 </a>
                 <a href="detail-product.html"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
@@ -416,99 +432,18 @@
                 </a>
                 <a href="#"
                   class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-md product-card laptop_bag">
-            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
-              <img src="../../public/assets/new_product_7.webp" alt="Front of men's Basic Tee in black."
-                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
-            </div>
-            <div class="mt-6 flex gap-6 flex-col justify-between">
-              <div>
-                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
-                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Laptop Bag - "Elegant Noir" Pattern
-                  </a>
-                </h3>
-                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 265.000</p>
-              </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
-                </a>
-                <a href="detail-product.html"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
-                  <span class="icon-[solar--eye-outline] text-3xl"></span>
-                </a>
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.088 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0" />
+                  </svg>
                 </a>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Pagination -->
-        <nav class="flex items-center gap-x-1" aria-label="Pagination">
-          <button type="button"
-            class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
-            aria-label="Previous">
-            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m15 18-6-6 6-6"></path>
-            </svg>
-            <span class="sr-only">Previous</span>
-          </button>
-          <div class="flex items-center gap-x-1">
-            <button type="button"
-              class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-200 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-              aria-current="page">1</button>
-            <button type="button"
-              class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">2</button>
-            <button type="button"
-              class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">3</button>
-            <div class="hs-tooltip inline-block">
-              <button type="button"
-                class="hs-tooltip-toggle group min-h-[38px] min-w-[38px] flex justify-center items-center text-gray-400 hover:text-blue-600 p-2 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">
-                <span class="group-hover:hidden text-xs">•••</span>
-                <svg class="group-hover:block hidden shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m6 17 5-5-5-5"></path>
-                  <path d="m13 17 5-5-5-5"></path>
-                </svg>
-                <span
-                  class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded shadow-sm"
-                  role="tooltip">
-                  Next 4 pages
-                </span>
-              </button>
-            </div>
-            <button type="button"
-              class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">8</button>
-          </div>
-          <button type="button"
-            class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
-            aria-label="Next">
-            <span class="sr-only">Next</span>
-            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m9 18 6-6-6-6"></path>
-            </svg>
-          </button>
-        </nav>
-        <!-- End Pagination -->
       </div>
     </div>
-  </div>
-
-  <!-- PRODUCT SECTION END-->
+  </section>
+  <!-- WISHLIST END-->
 
   <!-- FOOTER -->
   <footer class="w-full bg-white border-gray-300 py-10">
@@ -595,7 +530,6 @@
     </div>
   </footer>
   <!-- FOOTER END-->
-
 
   <!-- Preline Library -->
   <script src="../../public/js/preline.js"></script>

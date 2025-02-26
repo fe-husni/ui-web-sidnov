@@ -2770,6 +2770,10 @@ html{
     height: 3rem;
   }
 
+  .md\:h-5{
+    height: 1.25rem;
+  }
+
   .md\:h-56{
     height: 14rem;
   }
@@ -2780,6 +2784,10 @@ html{
 
   .md\:w-12{
     width: 3rem;
+  }
+
+  .md\:w-5{
+    width: 1.25rem;
   }
 
   .md\:w-96{
