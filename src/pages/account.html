@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CART - SIDNOV INDONESIA</title>
+  <title>ACCOUNT - SIDNOV INDONESIA</title>
   <link rel="icon" type="image/x-icon" href="../../public/assets/sidnov-icon.ico">
   <link href="../output.css" rel="stylesheet">
 </head>
@@ -118,8 +118,7 @@
         <div class="space-y-2">
           <a href="../index.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">HOME</a>
           <a href="shop.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">SHOP</a>
-          <a href="stories.html"
-            class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
+          <a href="stories.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
           <a href="#" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">ABOUT</a>
         </div>
 
@@ -139,213 +138,6 @@
     </div>
   </header>
 
-  <!-- HEADER TITLE -->
-  <div class="relative w-full h-40 md:h-56 lg:h-80 flex items-center justify-center bg-cover bg-center"
-    style="background-image: url('../../public/assets/bg-header.jpg');">
-    <!-- Konten Header -->
-    <div class="relative text-center text-white px-4">
-      <h1 class="text-3xl md:text-5xl font-bold">Shopping Cart</h1>
-      <nav class="mt-2 text-sm md:text-base font-light">
-        <a href="../index.html" class="text-gray-200 hover:underline">Home</a>
-        <span class="mx-2">→</span>
-        <span class="text-gray-100 font-bold">Shopping Cart</span>
-      </nav>
-    </div>
-  </div>
-  <!-- HEADER TITLE END -->
-
-
-  <!-- CART -->
-  <section>
-    <div class="container mx-auto px-4 lg:px-12 pt-8 pb-24">
-      <!-- Cart Table -->
-      <div class="overflow-x-auto">
-        <!-- Desktop Table -->
-        <table class="w-full hidden md:table">
-          <thead class="bg-gray-50">
-            <tr>
-              <th class="px-6 py-3 text-left text-sm font-medium text-gray-600">Product</th>
-              <th class="px-6 py-3 text-center text-sm font-medium text-gray-600">Quantity</th>
-              <th class="px-6 py-3 text-right text-sm font-medium text-gray-600">Total</th>
-              <th class="px-6 py-3"></th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-200 bg-white border-b">
-            <!-- Item 1 -->
-            <tr class="border-b">
-              <td class="px-6 py-4">
-                <div class="flex items-center gap-4">
-                  <img src="../../public/assets/new_product_1.webp" alt="Wander Bag" class="w-32 h-32 object-cover rounded">
-                  <div>
-                    <h3 class="text-lg font-medium text-gray-900">Square Bag - "Floral Breeze" Edition</h3>
-                    <p class="text-gray-600">Rp 245.000</p>
-                  </div>
-                </div>
-              </td>
-              <td class="px-6 py-4">
-                <div class="flex justify-center">
-                  <div class="flex border rounded w-28">
-                    <button class="px-3 py-1 hover:bg-gray-100">−</button>
-                    <input type="text" value="1" class="w-full text-center">
-                    <button class="px-3 py-1 hover:bg-gray-100">+</button>
-                  </div>
-                </div>
-              </td>
-              <td class="px-6 py-4 text-right text-gray-900">Rp 245.000</td>
-              <td class="px-6 py-4 text-right">
-                <button class="text-red-600 hover:text-gray-900">Remove ×</button>
-              </td>
-            </tr>
-            <!-- Item 2 -->
-            <tr class="border-b">
-              <td class="px-6 py-4">
-                <div class="flex items-center gap-4">
-                  <img src="../../public/assets/new_product_3.webp" alt="Wander Bag" class="w-32 h-32 object-cover rounded">
-                  <div>
-                    <h3 class="text-lg font-medium text-gray-900">Laptop Bag - "Orca Whale" Pattern</h3>
-                    <p class="text-gray-600">Rp 250.000</p>
-                  </div>
-                </div>
-              </td>
-              <td class="px-6 py-4">
-                <div class="flex justify-center">
-                  <div class="flex border rounded w-28">
-                    <button class="px-3 py-1 hover:bg-gray-100">−</button>
-                    <input type="text" value="1" class="w-full text-center">
-                    <button class="px-3 py-1 hover:bg-gray-100">+</button>
-                  </div>
-                </div>
-              </td>
-              <td class="px-6 py-4 text-right text-gray-900">Rp 250.000</td>
-              <td class="px-6 py-4 text-right">
-                <button class="text-red-600 hover:text-gray-900">Remove ×</button>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-
-        <!-- Mobile Layout -->
-        <div class="md:hidden space-y-4">
-          <!-- Item 1 -->
-          <div class="bg-white p-4 rounded-lg">
-            <div class="flex flex-row gap-4">
-              <div>
-                <img src="../../public/assets/new_product_1.webp" alt="Wander Bag" class="w-20 h-20 object-cover rounded">
-              </div>
-              <div class="flex flex-1 flex-col">
-                <h3 class="font-medium text-gray-900">Square Bag - "Floral Breeze" Edition</h3>
-                <p class="text-gray-900 mt-2">Rp 245.000</p>
-                <div class="mt-4 flex justify-between gap-x-4">
-                  <div class="flex border rounded w-28">
-                    <button class="text-sm px-3 py-1 hover:bg-gray-100">−</button>
-                    <input type="text" value="1" class="text-sm w-full text-center">
-                    <button class="text-sm px-3 py-1 hover:bg-gray-100">+</button>
-                  </div>
-                  <button class="text-gray-600 text-sm" type="submit">Remove ×</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!-- Item 2 -->
-          <div class="bg-white p-4 rounded-lg">
-            <div class="flex flex-row gap-4">
-              <div>
-                <img src="../../public/assets/new_product_3.webp" alt="Wander Bag" class="w-20 h-20 object-cover rounded">
-              </div>
-              <div class="flex flex-1 flex-col">
-                <h3 class="font-medium text-gray-900">Laptop Bag - “Orca Whale” Pattern</h3>
-                <p class="text-gray-900 mt-2">Rp 250.000</p>
-                <div class="mt-4 flex justify-between gap-x-4">
-                  <div class="flex border rounded w-28">
-                    <button class="text-sm px-3 py-1 hover:bg-gray-100">−</button>
-                    <input type="text" value="1" class="text-sm w-full text-center">
-                    <button class="text-sm px-3 py-1 hover:bg-gray-100">+</button>
-                  </div>
-                  <button class="text-gray-600 text-sm" type="submit">Remove ×</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cart Summary -->
-        <div class="mt-8">
-          <!-- Subtotal Info -->
-          <div class="text-right mb-6">
-            <p class="text-gray-600">Subtotal (2 items): <span class="font-medium text-gray-900">Rp 495.000</span></p>
-          </div>
-
-          <!-- Important Note -->
-          <div class="bg-pink-100 border-double border-4 border-red-500 p-4 md:py-8 md:px-24 mb-6">
-            <p class="text-gray-800">
-              <span class="font-medium">IMPORTANT NOTE:</span><br>
-              To checkout more items of the same type with a quantity of more than 1, please
-              ask for stock availability with the admin first! Enjoy a smooth and safe shopping
-              experience with us! 👍
-            </p>
-          </div>
-
-          <!-- Order Summary Section -->
-          <div class="md:flex md:justify-end">
-            <div class="w-full md:w-96">
-              <!-- Discount Code -->
-              <div class="mb-6">
-                <h3 class="font-medium mb-4">DISCOUNT CODE</h3>
-                <div class="flex gap-2">
-                  <input type="text" placeholder="Enter Code here"
-                    class="flex-1 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-gray-200">
-                  <button class="px-6 py-2 bg-gray-900 text-white rounded hover:bg-gray-800">
-                    Apply
-                  </button>
-                </div>
-              </div>
-
-              <!-- Order Summary -->
-              <div class="bg-white p-6 rounded-lg shadow-sm">
-                <h3 class="font-medium mb-4">ORDER SUMMARY</h3>
-                <div class="space-y-3 pb-4 mb-4 border-b">
-                  <div class="flex justify-between text-gray-600">
-                    <span>Subtotal</span>
-                    <span>Rp 495.000</span>
-                  </div>
-                  <div class="flex justify-between text-gray-600">
-                    <span>Delivery</span>
-                    <span>Rp 30.000</span>
-                  </div>
-                </div>
-                <div class="flex justify-between text-lg font-medium mb-6">
-                  <span>TOTAL</span>
-                  <span>Rp 525.000</span>
-                </div>
-
-                <!-- Checkout Buttons -->
-                <div class="space-y-3">
-                  <a href="#"><button class="w-full py-3 bg-gray-900 text-white rounded hover:bg-gray-800">
-                      Proceed to Checkout
-                    </button>
-                  </a>
-                  <a href="shop.html"><button
-                      class="w-full py-3 text-gray-600 hover:text-gray-900 flex items-center justify-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                          stroke-width="2">
-                          <path d="m8 5l-5 5l5 5" />
-                          <path d="M3 10h8c5.523 0 10 4.477 10 10v1" />
-                        </g>
-                      </svg>
-                      Continue Shopping
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-  <!-- CART END -->
 
   <!-- FOOTER -->
   <footer class="w-full bg-white border-gray-300 py-10">
@@ -432,44 +224,6 @@
     </div>
   </footer>
   <!-- FOOTER END-->
-
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-
-      // Handler untuk tombol +/-
-      document.querySelectorAll('.flex.border.rounded button').forEach(button => {
-        button.addEventListener('click', function (e) {
-          const input = this.parentElement.querySelector('input');
-          if (!input) return; // Pastikan input ditemukan
-
-          let value = parseInt(input.value) || 1;
-
-          if (this.textContent === '+') value++;
-          else value = Math.max(1, value - 1);
-
-          input.value = value;
-          updateTotals(input);
-        });
-      });
-
-      
-      document.querySelectorAll('.flex.border.rounded input').forEach(input => {
-        input.removeAttribute('readonly');
-
-        input.addEventListener('input', function (e) {
-          let value = parseInt(this.value) || 1;
-          this.value = Math.max(1, value);
-        });
-
-        input.addEventListener('blur', function (e) {
-          if (!this.value || this.value < 1) {
-            this.value = 1;
-          }
-        });
-      });
-    });
-  </script>
 
   <!-- Preline Library -->
   <script src="../../public/js/preline.js"></script>
