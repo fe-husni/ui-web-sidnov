@@ -1075,6 +1075,10 @@ html{
   margin-inline-start: 0.5rem;
 }
 
+.mt-1{
+  margin-top: 0.25rem;
+}
+
 .mt-10{
   margin-top: 2.5rem;
 }
@@ -1629,6 +1633,10 @@ html{
 
 .gap-y-24{
   row-gap: 6rem;
+}
+
+.gap-y-3{
+  row-gap: 0.75rem;
 }
 
 .gap-y-4{
@@ -2391,6 +2399,11 @@ html{
 .text-green-600{
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .text-red-600{

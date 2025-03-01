@@ -303,7 +303,7 @@
                 <div class="flex flex-col gap-y-2">
                   <span class="text-sm font-semibold">Phone Number</span>
                   <div class="relative">
-                    <input type="number" name="phone_number" id="hs-floating-gray-input-phone" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    <input type="tel" name="phone_number" id="hs-floating-gray-input-phone" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                     focus:pt-6
                     focus:pb-2
                     [&:not(:placeholder-shown)]:pt-6
@@ -574,7 +574,7 @@
             </div>
           </div>
 
-          <!-- Personal Information Offcanvas -->
+          <!-- Address List Offcanvas -->
           <div id="hs-offcanvas-right-address"
             class="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 end-0 transition-all duration-300 transform max-w-xs md:max-w-screen-sm h-full w-full z-[80] bg-white border-s overflow-y-auto"
             role="dialog" tabindex="-1" aria-labelledby="hs-offcanvas-right-address-label">
@@ -595,45 +595,21 @@
               </button>
             </div>
             <form class="p-4 flex flex-col items-center" method="POST">
-              <div class="max-w-sm space-y-5 text-gray-800">
-
-                <!-- Email Field -->
-                <div class="flex flex-col gap-y-2">
-                  <span class="text-sm font-semibold">Email</span>
-                  <div class="relative">
-                    <input type="email" name="email" id="hs-floating-gray-input-email" autocomplete="email" class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
-                    focus:pt-6
-                    focus:pb-2
-                    [&:not(:placeholder-shown)]:pt-6
-                    [&:not(:placeholder-shown)]:pb-2
-                    autofill:pt-6
-                    autofill:pb-2" placeholder="you@email.com" value="husnaa@gmail.com" readonly>
-                    <label for="hs-floating-gray-input-email" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                      peer-focus:scale-90
-                      peer-focus:translate-x-0.5
-                      peer-focus:-translate-y-1.5
-                      peer-focus:text-gray-500
-                      peer-[:not(:placeholder-shown)]:scale-90
-                      peer-[:not(:placeholder-shown)]:translate-x-0.5
-                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                      peer-[:not(:placeholder-shown)]:text-gray-500">Email</label>
-                  </div>
-                </div>
-                <!-- End Email Field -->
+              <div class="max-w-sm space-y-5 text-gray-800 w-full">
 
                 <!-- Name Field -->
                 <div class="flex flex-col gap-y-2">
                   <span class="text-sm font-semibold">Name</span>
-                  <div class="flex gap-x-3">
-                    <div class="relative">
-                      <input type="text" name="first_name" id="hs-floating-gray-input-fname" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                  <div class="flex flex-col sm:flex-row gap-y-3 gap-x-3">
+                    <div class="relative w-full">
+                      <input type="text" name="first_name_address" id="hs-floating-gray-input-fname-address" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                       focus:pt-6
                       focus:pb-2
                       [&:not(:placeholder-shown)]:pt-6
                       [&:not(:placeholder-shown)]:pb-2
                       autofill:pt-6
                       autofill:pb-2" placeholder="Your first name" value="Husni">
-                      <label for="hs-floating-gray-input-fname" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      <label for="hs-floating-gray-input-fname-address" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                         peer-focus:scale-90
                         peer-focus:translate-x-0.5
                         peer-focus:-translate-y-1.5
@@ -643,15 +619,15 @@
                         peer-[:not(:placeholder-shown)]:-translate-y-1.5
                         peer-[:not(:placeholder-shown)]:text-gray-500">First Name</label>
                     </div>
-                    <div class="relative">
-                      <input type="text" name="last_name" id="hs-floating-gray-input-lname" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    <div class="relative w-full">
+                      <input type="text" name="last_name_address" id="hs-floating-gray-input-lname-address" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                       focus:pt-6
                       focus:pb-2
                       [&:not(:placeholder-shown)]:pt-6
                       [&:not(:placeholder-shown)]:pb-2
                       autofill:pt-6
                       autofill:pb-2" placeholder="Your last name" value="Mubarok">
-                      <label for="hs-floating-gray-input-lname" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      <label for="hs-floating-gray-input-lname-address" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                         peer-focus:scale-90
                         peer-focus:translate-x-0.5
                         peer-focus:-translate-y-1.5
@@ -663,44 +639,20 @@
                     </div>
                   </div>
                 </div>
-                <!-- End First Name Field -->
-
-                <!-- Birthday Field -->
-                <div class="flex flex-col gap-y-2">
-                  <span class="text-sm font-semibold">Birthday</span>
-                  <div class="relative">
-                    <input type="date" name="birthday" id="hs-floating-gray-input-bday" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
-                    focus:pt-6
-                    focus:pb-2
-                    [&:not(:placeholder-shown)]:pt-6
-                    [&:not(:placeholder-shown)]:pb-2
-                    autofill:pt-6
-                    autofill:pb-2" placeholder="dd/mm/yy" value="2004-04-04">
-                    <label for="hs-floating-gray-input-bday" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                      peer-focus:scale-90
-                      peer-focus:translate-x-0.5
-                      peer-focus:-translate-y-1.5
-                      peer-focus:text-gray-500
-                      peer-[:not(:placeholder-shown)]:scale-90
-                      peer-[:not(:placeholder-shown)]:translate-x-0.5
-                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                      peer-[:not(:placeholder-shown)]:text-gray-500">Birthday</label>
-                  </div>
-                </div>
-                <!-- End Birthday Field -->
+                <!-- End Name Field -->
 
                 <!-- Phone Number Field -->
                 <div class="flex flex-col gap-y-2">
                   <span class="text-sm font-semibold">Phone Number</span>
                   <div class="relative">
-                    <input type="number" name="phone_number" id="hs-floating-gray-input-phone" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    <input type="tel" name="phone_number" id="hs-floating-gray-input-phone-address" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                     focus:pt-6
                     focus:pb-2
                     [&:not(:placeholder-shown)]:pt-6
                     [&:not(:placeholder-shown)]:pb-2
                     autofill:pt-6
-                    autofill:pb-2" placeholder="Phone Number" value="081233935454">
-                    <label for="hs-floating-gray-input-phone" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                    autofill:pb-2" placeholder="Phone Number" value="">
+                    <label for="hs-floating-gray-input-phone-address" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                       peer-focus:scale-90
                       peer-focus:translate-x-0.5
                       peer-focus:-translate-y-1.5
@@ -713,18 +665,61 @@
                 </div>
                 <!-- End Phone Number Field -->
 
-                <!-- Password Field -->
+                <!-- Address Fields -->
                 <div class="flex flex-col gap-y-2">
-                  <span class="text-sm font-semibold">Password</span>
+                  <span class="text-sm font-semibold">Address</span>
+
+                  <!-- Provinsi Field -->
                   <div class="relative">
-                    <input type="password" name="password" id="hs-floating-input-password" class="peer p-4 pe-14 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
-                      focus:pt-6
-                      focus:pb-2
-                      [&:not(:placeholder-shown)]:pt-6
-                      [&:not(:placeholder-shown)]:pb-2
-                      autofill:pt-6
-                      autofill:pb-2" placeholder="********" value="iclikiclik">
-                    <label for="hs-floating-input-password" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                    <select name="provinsi" id="provinsi" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2" required>
+                      <option value="" selected disabled>Select Provinsi</option> <!-- Placeholder default -->
+                    </select>
+                    <label for="provinsi" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      peer-focus:scale-90
+                      peer-focus:translate-x-0.5
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-gray-500
+                      peer-[:not(:placeholder-shown)]:scale-90
+                      peer-[:not(:placeholder-shown)]:translate-x-0.5
+                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Provinsi</label>
+                  </div>
+
+                  <!-- Kota Field -->
+                  <div class="relative mt-4">
+                    <select name="kota" id="kota" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2" disabled required>
+                      <option value="" selected disabled>Select City</option>
+                      <!-- Options will be populated dynamically based on province selection -->
+                    </select>
+                    <label for="kota" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      peer-focus:scale-90
+                      peer-focus:translate-x-0.5
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-gray-500
+                      peer-[:not(:placeholder-shown)]:scale-90
+                      peer-[:not(:placeholder-shown)]:translate-x-0.5
+                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Kota</label>
+                  </div>
+
+                  <!-- Kecamatan Field -->
+                  <div class="relative mt-4">
+                    <select name="kecamatan" id="kecamatan" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2" disabled required>
+                      <option value="" selected disabled>Select Kecamatan</option>
+                    </select>
+                    <label for="kecamatan" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                     peer-focus:scale-90
                     peer-focus:translate-x-0.5
                     peer-focus:-translate-y-1.5
@@ -732,42 +727,19 @@
                     peer-[:not(:placeholder-shown)]:scale-90
                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-gray-500">
-                      Password
-                    </label>
-
-                    <!-- Toggle Password -->
-                    <div class="absolute inset-y-0 end-0 flex items-center z-20 px-3">
-                      <button type="button" data-hs-toggle-password='{
-                                "target": "#hs-floating-input-password"
-                              }' class="text-gray-400 rounded-e-md focus:outline-none focus:text-blue-600">
-                        <svg class="shrink-0 size-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
-                          <path class="hs-password-active:hidden"
-                            d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
-                          <path class="hs-password-active:hidden"
-                            d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
-                          <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
-                          <path class="hidden hs-password-active:block"
-                            d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                          <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- End Toggle Password -->
+                    peer-[:not(:placeholder-shown)]:text-gray-500">Kecamatan</label>
                   </div>
 
-                  <!-- New Password -->
-                  <div class="relative">
-                    <input type="password" name="new_password" id="hs-floating-input-newpassword" class="peer p-4 pe-14 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
-                      focus:pt-6
-                      focus:pb-2
-                      [&:not(:placeholder-shown)]:pt-6
-                      [&:not(:placeholder-shown)]:pb-2
-                      autofill:pt-6
-                      autofill:pb-2" placeholder="New Password" value="">
-                    <label for="hs-floating-input-newpassword" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                  <!-- Kelurahan Field -->
+                  <div class="relative mt-4">
+                    <select name="kelurahan" id="kelurahan" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2" disabled required>
+                      <option value="" selected disabled>Select Kelurahan</option>
+                    </select>
+                    <label for="kelurahan" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                     peer-focus:scale-90
                     peer-focus:translate-x-0.5
                     peer-focus:-translate-y-1.5
@@ -775,83 +747,79 @@
                     peer-[:not(:placeholder-shown)]:scale-90
                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-gray-500">
-                      New Password
-                    </label>
-
-                    <!-- Toggle Password -->
-                    <div class="absolute inset-y-0 end-0 flex items-center z-20 px-3">
-                      <button type="button" data-hs-toggle-password='{
-                                "target": "#hs-floating-input-newpassword"
-                              }' class="text-gray-400 rounded-e-md focus:outline-none focus:text-blue-600">
-                        <svg class="shrink-0 size-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
-                          <path class="hs-newpassword-active:hidden"
-                            d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
-                          <path class="hs-password-active:hidden"
-                            d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
-                          <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
-                          <path class="hidden hs-password-active:block"
-                            d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                          <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- End Toggle Password -->
+                    peer-[:not(:placeholder-shown)]:text-gray-500">Desa/Kelurahan</label>
                   </div>
-                  <!-- New Password End -->
 
-                  <!-- Confirm new password -->
-                  <div class="relative">
-                    <input type="password" name="confirm_new_password" id="hs-floating-input-confirm-newpassword" class="peer p-4 pe-14 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
-                      focus:pt-6
-                      focus:pb-2
-                      [&:not(:placeholder-shown)]:pt-6
-                      [&:not(:placeholder-shown)]:pb-2
-                      autofill:pt-6
-                      autofill:pb-2" placeholder="Confirmation New Password" value="">
-                    <label for="hs-floating-input-confirm-newpassword" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:scale-90
-                    peer-focus:translate-x-0.5
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-gray-500
-                    peer-[:not(:placeholder-shown)]:scale-90
-                    peer-[:not(:placeholder-shown)]:translate-x-0.5
-                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-gray-500">
-                      Confirmation New Password
-                    </label>
-
-                    <!-- Toggle Password -->
-                    <div class="absolute inset-y-0 end-0 flex items-center z-20 px-3">
-                      <button type="button" data-hs-toggle-password='{
-                                "target": "#hs-floating-input-confirm-newpassword"
-                              }' class="text-gray-400 rounded-e-md focus:outline-none focus:text-blue-600">
-                        <svg class="shrink-0 size-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
-                          <path class="hs-newpassword-active:hidden"
-                            d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
-                          <path class="hs-password-active:hidden"
-                            d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
-                          <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
-                          <path class="hidden hs-password-active:block"
-                            d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                          <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- End Toggle Password -->
+                  <!-- Kode Pos Field -->
+                  <div class="relative mt-4">
+                    <input type="text" name="kode_pos" id="kode-pos" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2
+                    autofill:pt-6
+                    autofill:pb-2" placeholder="Postal Code" maxlength="5" pattern="[0-9]{5}" required>
+                    <label for="kode-pos" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      peer-focus:scale-90
+                      peer-focus:translate-x-0.5
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-gray-500
+                      peer-[:not(:placeholder-shown)]:scale-90
+                      peer-[:not(:placeholder-shown)]:translate-x-0.5
+                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Kode Pos</label>
+                    <p id="kode-pos-error" class="hidden text-red-500 text-xs mt-1">Kode pos tidak sesuai dengan daerah
+                      yang dipilih</p>
                   </div>
-                  <!-- Confirm new password End -->
+
+                  <!-- Nama Jalan, Gedung Field -->
+                  <div class="relative mt-4">
+                    <input type="text" name="nama_jalan" id="nama-jalan" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2
+                    autofill:pt-6
+                    autofill:pb-2" placeholder="Street Name, Building" required>
+                    <label for="nama-jalan" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      peer-focus:scale-90
+                      peer-focus:translate-x-0.5
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-gray-500
+                      peer-[:not(:placeholder-shown)]:scale-90
+                      peer-[:not(:placeholder-shown)]:translate-x-0.5
+                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Nama Jalan, Gedung</label>
+                  </div>
+
+                  <!-- Detail Alamat Field -->
+                  <div class="relative mt-4">
+                    <textarea name="detail_alamat" id="detail-alamat" rows="3" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2"
+                      placeholder="Instruksi Pengiriman/ Blok/ Unit No. (Optional)"></textarea>
+                    <label for="detail-alamat" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      peer-focus:scale-90
+                      peer-focus:translate-x-0.5
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-gray-500
+                      peer-[:not(:placeholder-shown)]:scale-90
+                      peer-[:not(:placeholder-shown)]:translate-x-0.5
+                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                      peer-[:not(:placeholder-shown)]:text-gray-500">More address details
+                      (Optional)</label>
+                  </div>
+
                 </div>
-                <!-- End Password Field -->
+                <!-- End Address Fields -->
+
               </div>
-              <div class="w-full md:max-w-sm md:px-3">
+              <div class="w-full md:max-w-sm">
                 <button type="submit"
                   class="mt-10 px-8 py-2 border border-gray-800 bg-gray-800 hover:opacity-85 hover:border-gray-800 text-white transition w-full">
-                  Save
+                  Add Address
                 </button>
               </div>
             </form>
@@ -951,6 +919,126 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       HSStaticMethods.autoInit();
+
+      const provinsiSelect = document.getElementById('provinsi');
+      const kotaSelect = document.getElementById('kota');
+      const kecamatanSelect = document.getElementById('kecamatan');
+      const kelurahanSelect = document.getElementById('kelurahan');
+      const kodePosInput = document.getElementById('kode-pos');
+      const kodePosError = document.getElementById('kode-pos-error');
+
+      let selectedProvince = null;
+      let selectedCity = null;
+      let selectedKecamatan = null;
+      let cityData = [];
+      let validPostalCode = '';
+
+      // Fetch data provinsi dari API
+      fetch('https://kodepos-2d475.firebaseio.com/list_propinsi.json')
+        .then(response => response.json())
+        .then(data => {
+          // Loop melalui data provinsi dan tambahkan ke dropdown
+          Object.entries(data).forEach(([key, name]) => {
+            const option = document.createElement('option');
+            option.value = key; // Gunakan key sebagai value (misal: p1, p2, dst.)
+            option.textContent = name; // Nama provinsi
+            provinsiSelect.appendChild(option);
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching provinsi data:', error);
+          // Jika terjadi error, tambahkan opsi error ke dropdown
+          const errorOption = document.createElement('option');
+          errorOption.value = '';
+          errorOption.textContent = 'Failed to load provinces';
+          provinsiSelect.appendChild(errorOption);
+        });
+
+      // Provinsi Changed
+      provinsiSelect.addEventListener('change', function () {
+        const provinsiKey = this.value;
+        selectedProvince = provinsiKey;
+
+        // Reset child fields
+        kotaSelect.innerHTML = '<option value="" disabled selected>Loading...</option>';
+        kecamatanSelect.disabled = true;
+        kelurahanSelect.disabled = true;
+        kodePosInput.value = '';
+
+        // Load Kota/Kab
+        fetch(`https://kodepos-2d475.firebaseio.com/list_kotakab/${provinsiKey}.json`)
+          .then(res => res.json())
+          .then(kota => {
+            kotaSelect.innerHTML = Object.entries(kota)
+              .map(([key, name]) => `<option value="${key}">${name}</option>`)
+              .join('');
+            kotaSelect.disabled = false;
+          });
+      });
+
+      // Kota Changed
+      kotaSelect.addEventListener('change', function () {
+        const kotaKey = this.value;
+        selectedCity = kotaKey;
+
+        // Reset child fields
+        kecamatanSelect.innerHTML = '<option value="" disabled selected>Loading...</option>';
+        kelurahanSelect.disabled = true;
+        kodePosInput.value = '';
+
+        // Load Kecamatan & Kelurahan
+        fetch(`https://kodepos-2d475.firebaseio.com/kota_kab/${kotaKey}.json`)
+          .then(res => res.json())
+          .then(data => {
+            cityData = data;
+            const kecamatans = [...new Set(data.map(item => item.kecamatan))];
+            kecamatanSelect.innerHTML = kecamatans
+              .map(kec => `<option value="${kec}">${kec}</option>`)
+              .join('');
+            kecamatanSelect.disabled = false;
+          });
+      });
+
+      // Kecamatan Changed
+      kecamatanSelect.addEventListener('change', function () {
+        selectedKecamatan = this.value;
+        const kelurahans = cityData
+          .filter(item => item.kecamatan === selectedKecamatan)
+          .map(item => ({
+            name: item.kelurahan,
+            kodepos: item.kodepos
+          }));
+
+        kelurahanSelect.innerHTML = kelurahans
+          .map(kel => `<option value="${kel.name}" data-kodepos="${kel.kodepos}">${kel.name}</option>`)
+          .join('');
+        kelurahanSelect.disabled = false;
+      });
+
+      // Kelurahan Changed
+      kelurahanSelect.addEventListener('change', function () {
+        const selectedOption = this.options[this.selectedIndex];
+        validPostalCode = selectedOption.dataset.kodepos;
+        kodePosInput.value = validPostalCode;
+      });
+
+      // Kode Pos Validation
+      kodePosInput.addEventListener('input', function () {
+        if (this.value !== validPostalCode) {
+          kodePosError.classList.remove('hidden');
+        } else {
+          kodePosError.classList.add('hidden');
+        }
+      });
+
+      // Form Submission
+      document.querySelector('form').addEventListener('submit', function (e) {
+        if (kodePosInput.value !== validPostalCode) {
+          e.preventDefault();
+          kodePosError.classList.remove('hidden');
+          kodePosInput.focus();
+        }
+      });
     });
   </script>
 
