@@ -145,7 +145,7 @@
         <!-- Header -->
         <h1 class="text-xl md:text-2xl font-bold text-center text-gray-800">Detail Account</h1>
 
-        <!-- Personal Information -->
+        <!-- Personal Information Section -->
         <div class="grid grid-cols-1 md:shadow-md md:px-5 md:pb-2 md:pt-6 md:rounded-xl">
           <div class="flex items-center justify-between text-gray-800 gap-x-4 py-4">
             <div class="flex gap-x-2 text-gray-800">
@@ -467,8 +467,9 @@
             </form>
           </div>
         </div>
+        <!-- Personal Information Section -->
 
-        <!-- Address List -->
+        <!-- Address List Section -->
         <div class="grid grid-cols-1 md:shadow-md md:px-5 py-6 md:rounded-xl">
           <div class="flex items-center justify-between text-gray-800 gap-x-4 py-4">
             <div class="flex gap-x-2 text-gray-800">
@@ -567,8 +568,9 @@
                 <!-- Action buttons -->
                 <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 text-sm">
                   <a href="#"
-                    class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium border border-blue-600 text-blue-600 hover:bg-blue-100 transition-all w-max">Set
-                    as delivery address</a>
+                    class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium border border-blue-600 text-blue-600 hover:bg-blue-100 transition-all w-max">
+                    Set as delivery address
+                  </a>
                 </div>
               </div>
             </div>
@@ -676,7 +678,7 @@
                     focus:pb-2
                     [&:not(:placeholder-shown)]:pt-6
                     [&:not(:placeholder-shown)]:pb-2" required>
-                      <option value="" selected disabled>Select Provinsi</option> <!-- Placeholder default -->
+                      <option value="" selected disabled>Select Province</option> <!-- Placeholder default -->
                     </select>
                     <label for="provinsi" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                       peer-focus:scale-90
@@ -686,7 +688,7 @@
                       peer-[:not(:placeholder-shown)]:scale-90
                       peer-[:not(:placeholder-shown)]:translate-x-0.5
                       peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                      peer-[:not(:placeholder-shown)]:text-gray-500">Provinsi</label>
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Province</label>
                   </div>
 
                   <!-- Kota Field -->
@@ -707,7 +709,7 @@
                       peer-[:not(:placeholder-shown)]:scale-90
                       peer-[:not(:placeholder-shown)]:translate-x-0.5
                       peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                      peer-[:not(:placeholder-shown)]:text-gray-500">Kota</label>
+                      peer-[:not(:placeholder-shown)]:text-gray-500">City</label>
                   </div>
 
                   <!-- Kecamatan Field -->
@@ -717,7 +719,7 @@
                     focus:pb-2
                     [&:not(:placeholder-shown)]:pt-6
                     [&:not(:placeholder-shown)]:pb-2" disabled required>
-                      <option value="" selected disabled>Select Kecamatan</option>
+                      <option value="" selected disabled>Select Sub-District</option>
                     </select>
                     <label for="kecamatan" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                     peer-focus:scale-90
@@ -727,7 +729,7 @@
                     peer-[:not(:placeholder-shown)]:scale-90
                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-gray-500">Kecamatan</label>
+                    peer-[:not(:placeholder-shown)]:text-gray-500">Sub-District</label>
                   </div>
 
                   <!-- Kelurahan Field -->
@@ -737,7 +739,7 @@
                     focus:pb-2
                     [&:not(:placeholder-shown)]:pt-6
                     [&:not(:placeholder-shown)]:pb-2" disabled required>
-                      <option value="" selected disabled>Select Kelurahan</option>
+                      <option value="" selected disabled>Select Village/Sub-Village</option>
                     </select>
                     <label for="kelurahan" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                     peer-focus:scale-90
@@ -747,7 +749,7 @@
                     peer-[:not(:placeholder-shown)]:scale-90
                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-gray-500">Desa/Kelurahan</label>
+                    peer-[:not(:placeholder-shown)]:text-gray-500">Village/Sub-Village</label>
                   </div>
 
                   <!-- Kode Pos Field -->
@@ -767,7 +769,7 @@
                       peer-[:not(:placeholder-shown)]:scale-90
                       peer-[:not(:placeholder-shown)]:translate-x-0.5
                       peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                      peer-[:not(:placeholder-shown)]:text-gray-500">Kode Pos</label>
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Postal Code</label>
                     <p id="kode-pos-error" class="hidden text-red-500 text-xs mt-1">Kode pos tidak sesuai dengan daerah
                       yang dipilih</p>
                   </div>
@@ -789,7 +791,7 @@
                       peer-[:not(:placeholder-shown)]:scale-90
                       peer-[:not(:placeholder-shown)]:translate-x-0.5
                       peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                      peer-[:not(:placeholder-shown)]:text-gray-500">Nama Jalan, Gedung</label>
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Name of Street, Building, or Other</label>
                   </div>
 
                   <!-- Detail Alamat Field -->
@@ -817,7 +819,7 @@
 
               </div>
               <div class="w-full md:max-w-sm">
-                <button type="submit"
+                <button type=""
                   class="mt-10 px-8 py-2 border border-gray-800 bg-gray-800 hover:opacity-85 hover:border-gray-800 text-white transition w-full">
                   Add Address
                 </button>
@@ -825,6 +827,7 @@
             </form>
           </div>
         </div>
+        <!-- Address List Section End -->
       </div>
     </div>
   </section>
@@ -937,15 +940,16 @@
       fetch('https://kodepos-2d475.firebaseio.com/list_propinsi.json')
         .then(response => response.json())
         .then(data => {
-          // Loop melalui data provinsi dan tambahkan ke dropdown
+          // Loop data provinsi dan tambahkan ke dropdown
           Object.entries(data).forEach(([key, name]) => {
             const option = document.createElement('option');
-            option.value = key; // Gunakan key sebagai value (misal: p1, p2, dst.)
+            option.value = key; // Menggunakan key sebagai value (Ex: p1, p2, dst.)
             option.textContent = name; // Nama provinsi
             provinsiSelect.appendChild(option);
           });
         })
         .catch(error => {
+          // Error handling ketika gagal fetch data
           console.error('Error fetching provinsi data:', error);
           // Jika terjadi error, tambahkan opsi error ke dropdown
           const errorOption = document.createElement('option');

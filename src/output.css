@@ -2320,6 +2320,10 @@ html{
   line-height: 2.25rem;
 }
 
+.leading-\[5px\]{
+  line-height: 5px;
+}
+
 .leading-none{
   line-height: 1;
 }
