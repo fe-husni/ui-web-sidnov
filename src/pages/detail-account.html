@@ -141,9 +141,9 @@
   <!-- ACCOUNT DETAIL -->
   <section>
     <div class="container mx-auto lg:px-12 px-4 md:mt-12 pt-6 pb-16">
-      <div class="max-w-xl mx-auto bg-white rounded-lg">
+      <div class="max-w-xl mx-auto bg-white rounded-lg flex flex-col gap-y-8">
         <!-- Header -->
-        <h1 class="text-xl md:text-2xl font-bold text-center text-gray-800 mb-6">Detail Account</h1>
+        <h1 class="text-xl md:text-2xl font-bold text-center text-gray-800">Detail Account</h1>
 
         <!-- Personal Information -->
         <div class="grid grid-cols-1 md:shadow-md md:px-5 md:pb-2 md:pt-6 md:rounded-xl">
@@ -460,10 +460,400 @@
               </div>
               <div class="w-full md:max-w-sm md:px-3">
                 <button type="submit"
-                class="mt-10 px-8 py-2 border border-gray-800 bg-gray-800 hover:opacity-85 hover:border-gray-800 text-white transition w-full">
-                Save
+                  class="mt-10 px-8 py-2 border border-gray-800 bg-gray-800 hover:opacity-85 hover:border-gray-800 text-white transition w-full">
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Address List -->
+        <div class="grid grid-cols-1 md:shadow-md md:px-5 py-6 md:rounded-xl">
+          <div class="flex items-center justify-between text-gray-800 gap-x-4 py-4">
+            <div class="flex gap-x-2 text-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                  <path d="M8 36v8h32V4H8v8M6 30h4m-4-6h4m-4-6h4" />
+                  <circle cx="24" cy="17" r="4" />
+                  <path d="M32 35a8 8 0 1 0-16 0" />
+                </g>
+              </svg>
+              <h1 class="text-lg text-gray-800 font-semibold">Address List <span>(2)</span></h1>
+            </div>
+            <button type="button" class="text-blue-600 underline" aria-haspopup="dialog" aria-expanded="false"
+              aria-controls="hs-offcanvas-right-address" data-hs-overlay="#hs-offcanvas-right-address">
+              Add New
+            </button>
+          </div>
+
+          <div class="grid text-gray-800 space-y-4">
+            <!-- First Address Card -->
+            <div class="border rounded-lg shadow-sm overflow-hidden bg-white">
+              <!-- Header with name and edit button -->
+              <div class="flex justify-between items-center p-4 border-b">
+                <div class="flex flex-col">
+                  <h3 class="font-semibold text-md">Husna Murokab</h3>
+                  <div>
+                    <span
+                      class="py-1 px-2 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">
+                      <svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                      Active Shipping Address
+                    </span>
+                  </div>
+                </div>
+                <div class="flex space-x-2">
+                  <button class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Address details -->
+              <div class="p-4">
+                <p class="text-sm mb-2 line-clamp-1">Jalan Jatirembe, Jatirembe, Benjeng. Sebelah warung makan Bu Sri
+                  dan Bengkel motor</p>
+                <p class="text-sm">Phone Number: 081234968484</p>
+              </div>
+            </div>
+
+            <!-- Second Address Card -->
+            <div class="border rounded-lg shadow-sm overflow-hidden bg-white">
+              <!-- Header with name and edit button -->
+              <div class="flex justify-between items-center p-4 border-b">
+                <div class="flex flex-col">
+                  <h3 class="font-semibold text-md">Husna Murokab</h3>
+                  <!-- <div>
+                    <span class="py-1 px-2 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">
+                      <svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                      Active Shipping Address
+                    </span>
+                  </div> -->
+                </div>
+                <div class="flex space-x-2">
+                  <button class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                  </button>
+                  <button class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Address details -->
+              <div class="p-4">
+                <p class="text-sm mb-2 line-clamp-1">Jalan Purwakarta No.3, Bandung, Jawa Barat | 40291</p>
+                <p class="text-sm mb-4">Phone Number: (022) 7200736</p>
+                <!-- Action buttons -->
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 text-sm">
+                  <a href="#"
+                    class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium border border-blue-600 text-blue-600 hover:bg-blue-100 transition-all w-max">Set
+                    as delivery address</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Information Offcanvas -->
+          <div id="hs-offcanvas-right-address"
+            class="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 end-0 transition-all duration-300 transform max-w-xs md:max-w-screen-sm h-full w-full z-[80] bg-white border-s overflow-y-auto"
+            role="dialog" tabindex="-1" aria-labelledby="hs-offcanvas-right-address-label">
+            <div class="flex justify-between items-center py-3 px-4 border-b">
+              <h3 id="hs-offcanvas-right-address-label" class="font-bold text-gray-800">
+                Provide New Address
+              </h3>
+              <button type="button"
+                class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+                aria-label="Close" data-hs-overlay="#hs-offcanvas-right-address">
+                <span class="sr-only">Close</span>
+                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
               </button>
             </div>
+            <form class="p-4 flex flex-col items-center" method="POST">
+              <div class="max-w-sm space-y-5 text-gray-800">
+
+                <!-- Email Field -->
+                <div class="flex flex-col gap-y-2">
+                  <span class="text-sm font-semibold">Email</span>
+                  <div class="relative">
+                    <input type="email" name="email" id="hs-floating-gray-input-email" autocomplete="email" class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2
+                    autofill:pt-6
+                    autofill:pb-2" placeholder="you@email.com" value="husnaa@gmail.com" readonly>
+                    <label for="hs-floating-gray-input-email" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      peer-focus:scale-90
+                      peer-focus:translate-x-0.5
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-gray-500
+                      peer-[:not(:placeholder-shown)]:scale-90
+                      peer-[:not(:placeholder-shown)]:translate-x-0.5
+                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Email</label>
+                  </div>
+                </div>
+                <!-- End Email Field -->
+
+                <!-- Name Field -->
+                <div class="flex flex-col gap-y-2">
+                  <span class="text-sm font-semibold">Name</span>
+                  <div class="flex gap-x-3">
+                    <div class="relative">
+                      <input type="text" name="first_name" id="hs-floating-gray-input-fname" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                      focus:pt-6
+                      focus:pb-2
+                      [&:not(:placeholder-shown)]:pt-6
+                      [&:not(:placeholder-shown)]:pb-2
+                      autofill:pt-6
+                      autofill:pb-2" placeholder="Your first name" value="Husni">
+                      <label for="hs-floating-gray-input-fname" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                        peer-focus:scale-90
+                        peer-focus:translate-x-0.5
+                        peer-focus:-translate-y-1.5
+                        peer-focus:text-gray-500
+                        peer-[:not(:placeholder-shown)]:scale-90
+                        peer-[:not(:placeholder-shown)]:translate-x-0.5
+                        peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                        peer-[:not(:placeholder-shown)]:text-gray-500">First Name</label>
+                    </div>
+                    <div class="relative">
+                      <input type="text" name="last_name" id="hs-floating-gray-input-lname" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                      focus:pt-6
+                      focus:pb-2
+                      [&:not(:placeholder-shown)]:pt-6
+                      [&:not(:placeholder-shown)]:pb-2
+                      autofill:pt-6
+                      autofill:pb-2" placeholder="Your last name" value="Mubarok">
+                      <label for="hs-floating-gray-input-lname" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                        peer-focus:scale-90
+                        peer-focus:translate-x-0.5
+                        peer-focus:-translate-y-1.5
+                        peer-focus:text-gray-500
+                        peer-[:not(:placeholder-shown)]:scale-90
+                        peer-[:not(:placeholder-shown)]:translate-x-0.5
+                        peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                        peer-[:not(:placeholder-shown)]:text-gray-500">Last Name</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- End First Name Field -->
+
+                <!-- Birthday Field -->
+                <div class="flex flex-col gap-y-2">
+                  <span class="text-sm font-semibold">Birthday</span>
+                  <div class="relative">
+                    <input type="date" name="birthday" id="hs-floating-gray-input-bday" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2
+                    autofill:pt-6
+                    autofill:pb-2" placeholder="dd/mm/yy" value="2004-04-04">
+                    <label for="hs-floating-gray-input-bday" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      peer-focus:scale-90
+                      peer-focus:translate-x-0.5
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-gray-500
+                      peer-[:not(:placeholder-shown)]:scale-90
+                      peer-[:not(:placeholder-shown)]:translate-x-0.5
+                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Birthday</label>
+                  </div>
+                </div>
+                <!-- End Birthday Field -->
+
+                <!-- Phone Number Field -->
+                <div class="flex flex-col gap-y-2">
+                  <span class="text-sm font-semibold">Phone Number</span>
+                  <div class="relative">
+                    <input type="number" name="phone_number" id="hs-floating-gray-input-phone" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                    focus:pt-6
+                    focus:pb-2
+                    [&:not(:placeholder-shown)]:pt-6
+                    [&:not(:placeholder-shown)]:pb-2
+                    autofill:pt-6
+                    autofill:pb-2" placeholder="Phone Number" value="081233935454">
+                    <label for="hs-floating-gray-input-phone" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      peer-focus:scale-90
+                      peer-focus:translate-x-0.5
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-gray-500
+                      peer-[:not(:placeholder-shown)]:scale-90
+                      peer-[:not(:placeholder-shown)]:translate-x-0.5
+                      peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                      peer-[:not(:placeholder-shown)]:text-gray-500">Phone Number</label>
+                  </div>
+                </div>
+                <!-- End Phone Number Field -->
+
+                <!-- Password Field -->
+                <div class="flex flex-col gap-y-2">
+                  <span class="text-sm font-semibold">Password</span>
+                  <div class="relative">
+                    <input type="password" name="password" id="hs-floating-input-password" class="peer p-4 pe-14 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                      focus:pt-6
+                      focus:pb-2
+                      [&:not(:placeholder-shown)]:pt-6
+                      [&:not(:placeholder-shown)]:pb-2
+                      autofill:pt-6
+                      autofill:pb-2" placeholder="********" value="iclikiclik">
+                    <label for="hs-floating-input-password" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                    peer-focus:scale-90
+                    peer-focus:translate-x-0.5
+                    peer-focus:-translate-y-1.5
+                    peer-focus:text-gray-500
+                    peer-[:not(:placeholder-shown)]:scale-90
+                    peer-[:not(:placeholder-shown)]:translate-x-0.5
+                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                    peer-[:not(:placeholder-shown)]:text-gray-500">
+                      Password
+                    </label>
+
+                    <!-- Toggle Password -->
+                    <div class="absolute inset-y-0 end-0 flex items-center z-20 px-3">
+                      <button type="button" data-hs-toggle-password='{
+                                "target": "#hs-floating-input-password"
+                              }' class="text-gray-400 rounded-e-md focus:outline-none focus:text-blue-600">
+                        <svg class="shrink-0 size-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
+                          <path class="hs-password-active:hidden"
+                            d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
+                          <path class="hs-password-active:hidden"
+                            d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
+                          <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
+                          <path class="hidden hs-password-active:block"
+                            d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                          <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
+                        </svg>
+                      </button>
+                    </div>
+                    <!-- End Toggle Password -->
+                  </div>
+
+                  <!-- New Password -->
+                  <div class="relative">
+                    <input type="password" name="new_password" id="hs-floating-input-newpassword" class="peer p-4 pe-14 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                      focus:pt-6
+                      focus:pb-2
+                      [&:not(:placeholder-shown)]:pt-6
+                      [&:not(:placeholder-shown)]:pb-2
+                      autofill:pt-6
+                      autofill:pb-2" placeholder="New Password" value="">
+                    <label for="hs-floating-input-newpassword" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                    peer-focus:scale-90
+                    peer-focus:translate-x-0.5
+                    peer-focus:-translate-y-1.5
+                    peer-focus:text-gray-500
+                    peer-[:not(:placeholder-shown)]:scale-90
+                    peer-[:not(:placeholder-shown)]:translate-x-0.5
+                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                    peer-[:not(:placeholder-shown)]:text-gray-500">
+                      New Password
+                    </label>
+
+                    <!-- Toggle Password -->
+                    <div class="absolute inset-y-0 end-0 flex items-center z-20 px-3">
+                      <button type="button" data-hs-toggle-password='{
+                                "target": "#hs-floating-input-newpassword"
+                              }' class="text-gray-400 rounded-e-md focus:outline-none focus:text-blue-600">
+                        <svg class="shrink-0 size-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
+                          <path class="hs-newpassword-active:hidden"
+                            d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
+                          <path class="hs-password-active:hidden"
+                            d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
+                          <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
+                          <path class="hidden hs-password-active:block"
+                            d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                          <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
+                        </svg>
+                      </button>
+                    </div>
+                    <!-- End Toggle Password -->
+                  </div>
+                  <!-- New Password End -->
+
+                  <!-- Confirm new password -->
+                  <div class="relative">
+                    <input type="password" name="confirm_new_password" id="hs-floating-input-confirm-newpassword" class="peer p-4 pe-14 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                      focus:pt-6
+                      focus:pb-2
+                      [&:not(:placeholder-shown)]:pt-6
+                      [&:not(:placeholder-shown)]:pb-2
+                      autofill:pt-6
+                      autofill:pb-2" placeholder="Confirmation New Password" value="">
+                    <label for="hs-floating-input-confirm-newpassword" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                    peer-focus:scale-90
+                    peer-focus:translate-x-0.5
+                    peer-focus:-translate-y-1.5
+                    peer-focus:text-gray-500
+                    peer-[:not(:placeholder-shown)]:scale-90
+                    peer-[:not(:placeholder-shown)]:translate-x-0.5
+                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
+                    peer-[:not(:placeholder-shown)]:text-gray-500">
+                      Confirmation New Password
+                    </label>
+
+                    <!-- Toggle Password -->
+                    <div class="absolute inset-y-0 end-0 flex items-center z-20 px-3">
+                      <button type="button" data-hs-toggle-password='{
+                                "target": "#hs-floating-input-confirm-newpassword"
+                              }' class="text-gray-400 rounded-e-md focus:outline-none focus:text-blue-600">
+                        <svg class="shrink-0 size-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
+                          <path class="hs-newpassword-active:hidden"
+                            d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
+                          <path class="hs-password-active:hidden"
+                            d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
+                          <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
+                          <path class="hidden hs-password-active:block"
+                            d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                          <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
+                        </svg>
+                      </button>
+                    </div>
+                    <!-- End Toggle Password -->
+                  </div>
+                  <!-- Confirm new password End -->
+                </div>
+                <!-- End Password Field -->
+              </div>
+              <div class="w-full md:max-w-sm md:px-3">
+                <button type="submit"
+                  class="mt-10 px-8 py-2 border border-gray-800 bg-gray-800 hover:opacity-85 hover:border-gray-800 text-white transition w-full">
+                  Save
+                </button>
+              </div>
             </form>
           </div>
         </div>
