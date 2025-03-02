@@ -20,6 +20,8 @@
   "dependencies": {
     "@preline/tabs": "^2.5.2",
     "@preline/toggle-password": "^2.5.2",
+    "dropzone": "^6.0.0-beta.2",
+    "lodash": "^4.17.21",
     "preline": "^2.7.0",
     "tw-elements": "^2.0.0"
   }

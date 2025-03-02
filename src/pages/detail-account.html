@@ -177,6 +177,11 @@
 
           <div class="grid grid-cols-1 text-gray-800">
             <div class="border-b py-4">
+              <p class="font-semibold">Profile Picture</p>
+              <img src="https://i.pinimg.com/736x/ca/5e/af/ca5eafcf06d5e2c7d6630313730fa4d6.jpg"
+                class="w-12 h-12 object-cover rounded-full border-2 border-gray-500" alt="profile img">
+            </div>
+            <div class="border-b py-4">
               <p class="font-semibold">Email</p>
               <p class="text-sm text-gray-600">husnaa@gmail.com</p>
             </div>
@@ -220,6 +225,59 @@
             </div>
             <form class="p-4 flex flex-col items-center" method="POST">
               <div class="max-w-sm space-y-5 text-gray-800">
+
+                <!-- Profile Field -->
+                <div class="flex flex-col gap-y-2">
+                  <span class="text-sm font-semibold">Profile Picture</span>
+                  <div data-hs-file-upload='{
+                    "url": "/upload",
+                    "acceptedFiles": "image/*",
+                    "maxFiles": 1,
+                    "singleton": true
+                  }'>
+                    <template data-hs-file-upload-preview="">
+                      <div class="size-20">
+                        <img class="w-full object-contain rounded-full" data-dz-thumbnail="">
+                      </div>
+                    </template>
+
+                    <div class="flex flex-wrap items-center gap-3 sm:gap-5">
+                      <div class="group" data-hs-file-upload-previews="" data-hs-file-upload-pseudo-trigger="">
+                        <span
+                          class="group-has-[div]:hidden flex shrink-0 justify-center items-center size-20 border-2 border-dotted border-gray-300 text-gray-400 cursor-pointer rounded-full hover:bg-gray-50">
+                          <svg class="shrink-0 size-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="10" r="3"></circle>
+                            <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path>
+                          </svg>
+                        </span>
+                      </div>
+
+                      <div class="grow">
+                        <div class="flex items-center gap-x-2">
+                          <button type="button"
+                            class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium border border-transparent bg-gray-800 text-white hover:opacity-85 focus:outline-none focus:opacity-85 disabled:opacity-50 disabled:pointer-events-none"
+                            data-hs-file-upload-trigger="">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                              <polyline points="17 8 12 3 7 8"></polyline>
+                              <line x1="12" x2="12" y1="3" y2="15"></line>
+                            </svg>
+                            Upload photo
+                          </button>
+                          <button type="button"
+                            class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-semibold border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                            data-hs-file-upload-clear="">Delete</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Profile Field -->
 
                 <!-- Email Field -->
                 <div class="flex flex-col gap-y-2">
@@ -1062,6 +1120,10 @@
 
   <!-- Preline Library -->
   <script src="../../public/js/preline.js"></script>
+
+  <!-- Form Library, Lodash & Dropzone Plugin -->
+  <script src="../../node_modules/dropzone/dist/dropzone-min.js"></script>
+  <script src="../../node_modules/lodash/lodash.min.js"></script>
 </body>
 
 </html>
