@@ -150,11 +150,11 @@
     <div class="container mx-auto lg:px-12 px-4 pt-8 lg:h-screen">
       <div class="grid grid-cols-12 justify-center items-center gap-5">
         <!-- Laptop Bag -->
-        <div class="col-span-12 lg:col-span-7 relative group">
-          <img src="../public/assets/laptop_bag.webp" alt="Laptop Bag" class="object-cover w-full h-full">
+        <div class="col-span-12 lg:col-span-7 relative group h-full">
+          <img src="../public/assets/laptop_bag_hero.webp" alt="Laptop Bag" class="object-cover w-full h-full">
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
-            <h2 class="text-x md:text-3xl font-title">Laptop Bags</h2>
+            <h2 class="text-xl md:text-3xl font-title">Laptop Bags</h2>
             <p class="text-xs lg:text-base text-center lg:w-9/12">Style Meets Functionality! Stay stylish and organized
               with our exclusive laptop bags, crafted for durability and elegance.
             </p>
@@ -165,7 +165,7 @@
         <!-- Square Bags -->
         <div class="col-span-12 lg:col-span-5 flex flex-col md:flex-row lg:flex-col gap-5">
           <div class="relative group w-full md:w-1/2 lg:w-full">
-            <img src="../public/assets/tote_bag.webp" alt="Square Bag" class="object-cover w-full h-full">
+            <img src="../public/assets/tote_bag_hero.webp" alt="Square Bag" class="object-cover w-full h-full">
             <div
               class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
               <h2 class="text-xl md:text-3xl font-title">Tote Bags</h2>
@@ -178,7 +178,7 @@
             </div>
           </div>
           <div class="relative group w-full md:w-1/2 lg:w-full">
-            <img src="../public/assets/square_bag.webp" alt="Tote Bag" class="object-cover w-full h-full">
+            <img src="../public/assets/square_bag_hero.webp" alt="Tote Bag" class="object-cover w-full h-full">
             <div
               class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
               <h2 class="text-xl md:text-3xl font-title">Square Bags</h2>
@@ -562,8 +562,48 @@
   <section>
     <div class="container mx-auto lg:px-12 px-4 mt-24 md:mt-12 pt-20 pb-28">
       <div class="flex flex-col lg:grid lg:grid-cols-12 gap-x-10 gap-y-6 items-center">
-        <div class="w-full h-full lg:col-span-5">
-          <img src="../public/assets/about-home-img.png" alt="about-sidnov" class="object-cover w-full h-full">
+        <div class="w-full h-full lg:col-span-5 relative">
+          <!-- Video container with proper aspect ratio and fixed height on desktop -->
+          <div class="relative w-full aspect-[9/16] md:w-[309px] md:h-[550px] lg:w-[404px] lg:h-[720px] mx-auto">
+            <video id="aboutVideo" class="absolute inset-0 w-full h-full object-cover rounded-md shadow-lg"
+              poster="../public/assets/aboutsidnov_thumbnail.jpg">
+              <source src="../public/assets/aboutsidnov_video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Play button overlay -->
+            <div id="playButton" class="absolute inset-0 flex items-center justify-center cursor-pointer group">
+              <button
+                class="flex items-center justify-center px-4 py-3 bg-white/50 backdrop-blur-sm rounded-none shadow-lg transition-all duration-300 hover:bg-white/30 hover:scale-105 border border-white/30">
+                <span class="inline-flex items-center gap-x-2">
+                  <svg class="w-4 h-4 text-gray-800" viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M3 3.732a1 1 0 0 1 1.51-.86l8.92 5.021c.508.286.508 1.021 0 1.307L4.51 14.222A1 1 0 0 1 3 13.362V3.732Z" />
+                  </svg>
+                  <span class="text-sm font-medium text-gray-800">Play the overview</span>
+                </span>
+              </button>
+            </div>
+
+            <!-- Video controls for pause/stop that appear when video is playing -->
+            <div id="videoControls"
+              class="absolute bottom-4 right-4 opacity-0 pointer-events-none transition-opacity duration-300">
+              <button id="pauseButton"
+                class="p-2 bg-white bg-opacity-80 rounded-full shadow-md mr-2 hover:bg-opacity-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="M16 19q-.825 0-1.412-.587T14 17V7q0-.825.588-1.412T16 5t1.413.588T18 7v10q0 .825-.587 1.413T16 19m-8 0q-.825 0-1.412-.587T6 17V7q0-.825.588-1.412T8 5t1.413.588T10 7v10q0 .825-.587 1.413T8 19"
+                    stroke-width="0.5" stroke="currentColor" />
+                </svg>
+              </button>
+              <button id="stopButton" class="p-2 bg-white bg-opacity-80 rounded-full shadow-md hover:bg-opacity-100">
+                <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5z" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="w-full flex flex-col gap-4 lg:col-span-7 text-center lg:text-left">
           <h1 class="text-2xl md:text-[40px] text-gray-800 font-extrabold leading-normal">
@@ -764,6 +804,67 @@
           autoSlideInterval = setInterval(nextSlide, 5000);
         });
       });
+    });
+
+    // ======== VIDEO PLAYER ==========
+    // Get elements
+    const video = document.getElementById('aboutVideo');
+    const playButton = document.getElementById('playButton');
+    const videoControls = document.getElementById('videoControls');
+    const pauseButton = document.getElementById('pauseButton');
+    const stopButton = document.getElementById('stopButton');
+
+    // Add click event to play button
+    playButton.addEventListener('click', function () {
+      video.play();
+      playButton.classList.add('opacity-0');
+      playButton.classList.add('pointer-events-none');
+      videoControls.classList.remove('opacity-0');
+      videoControls.classList.remove('pointer-events-none');
+    });
+
+    // Add click event to pause button
+    pauseButton.addEventListener('click', function () {
+      video.pause();
+      videoControls.classList.add('opacity-0');
+      videoControls.classList.add('pointer-events-none');
+      playButton.classList.remove('opacity-0');
+      playButton.classList.remove('pointer-events-none');
+    });
+
+    // Add click event to stop button
+    stopButton.addEventListener('click', function () {
+      video.pause();
+      video.currentTime = 0;
+      videoControls.classList.add('opacity-0');
+      videoControls.classList.add('pointer-events-none');
+      playButton.classList.remove('opacity-0');
+      playButton.classList.remove('pointer-events-none');
+    });
+
+    // Show play button again when video ends
+    video.addEventListener('ended', function () {
+      video.currentTime = 0;
+      playButton.classList.remove('opacity-0');
+      playButton.classList.remove('pointer-events-none');
+      videoControls.classList.add('opacity-0');
+      videoControls.classList.add('pointer-events-none');
+    });
+
+    // Add hover event to video container to show/hide controls
+    const videoContainer = video.parentElement;
+    videoContainer.addEventListener('mouseenter', function () {
+      if (!video.paused && !video.ended) {
+        videoControls.classList.remove('opacity-0');
+        videoControls.classList.remove('pointer-events-none');
+      }
+    });
+
+    videoContainer.addEventListener('mouseleave', function () {
+      if (!video.paused && !video.ended) {
+        videoControls.classList.add('opacity-0');
+        videoControls.classList.add('pointer-events-none');
+      }
     });
   </script>
 
