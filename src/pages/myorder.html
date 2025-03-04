@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY ORDER - SIDNOV INDONESIA</title>
+  <link rel="icon" type="image/x-icon" href="../../public/assets/sidnov-icon.ico">
+  <link href="../output.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Main Navbar -->
+  <header class="w-full bg-white border-b border-gray-200">
+    <nav class="relative max-w-[85rem] w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="grid grid-cols-3 items-center">
+        <!-- Left Section - Mobile Toggle & Desktop Search -->
+        <div class="flex items-center">
+          <!-- Mobile Toggle Button -->
+          <button type="button" class="md:hidden size-9 flex justify-center items-center text-gray-800"
+            data-hs-overlay="#mobile-menu" aria-controls="mobile-menu" aria-label="Toggle navigation">
+            <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+          <!-- Desktop Search -->
+          <div class="hidden md:block w-64 max-w-xs">
+            <div class="relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3.5">
+                <svg class="size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <input type="search" name="search"
+                class="py-2 ps-10 pe-4 block w-full border-none text-sm focus:border focus:border-gray-400 focus:ring-gray-400"
+                placeholder="Find your perfect bag">
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Section - Logo -->
+        <div class="flex justify-center">
+          <a href="../index.html" class="flex-none">
+            <img src="../../public/assets/Sidnov-Logo.png" alt="Sidnov" class="h-20">
+          </a>
+        </div>
+
+        <!-- Right Section - Auth & Cart -->
+        <div class="flex items-center justify-end gap-4">
+          <!-- State Before Login/register -->
+          <!-- <div class="hidden md:flex items-center gap-2">
+            <a href="signin.html" class="text-sm text-gray-800">Sign in</a>
+            <span class="text-gray-300">/</span>
+            <a href="signup.html" class="text-sm text-gray-500">Sign up</a>
+          </div> -->
+
+          <!-- State After Login/register -->
+          <div class="hidden md:flex items-center gap-2">
+            <a href="account.html" class="text-sm text-gray-800">Account</a>
+          </div>
+          <a href="shopping-cart.html" class="flex items-center gap-1 text-sm">
+            <span class="hidden md:inline-block">Cart</span>
+            <span>(2)</span>
+            <span class="icon-[solar--cart-5-linear] w-6 h-6"></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Secondary Navigation (Desktop) -->
+    <nav class="hidden md:block bg-white shadow-md border-t">
+      <div class="max-w-[85rem] mx-auto px-4">
+        <div class="flex justify-center gap-10 py-3">
+          <a href="../index.html" class="font-medium text-sm text-gray-800 hover:underline">HOME</a>
+          <a href="shop.html" class="font-medium text-sm text-gray-800 hover:underline">SHOP</a>
+          <a href="stories.html" class="font-medium text-sm text-gray-800 hover:underline">STORIES</a>
+          <a href="about.html" class="font-medium text-sm text-gray-800 hover:underline">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+      class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-[60] bg-white border-e hidden"
+      tabindex="-1">
+      <div class="flex justify-between items-center py-3 px-4 border-b">
+        <h3 class="font-bold text-gray-800">SIDNOV INDONESIA</h3>
+        <button type="button"
+          class="flex justify-center items-center size-9 text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+          data-hs-overlay="#mobile-menu">
+          <span class="sr-only">Close modal</span>
+          <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-4">
+        <!-- Mobile Search -->
+        <div class="relative mb-4">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5">
+            <svg class="size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <input type="search" name="search"
+            class="py-2 ps-10 pe-4 block w-full border border-gray-200 text-sm focus:border-gray-500 focus:ring-gray-500"
+            placeholder="Find your perfect bag..">
+        </div>
+
+        <!-- Mobile Nav Links -->
+        <div class="space-y-2">
+          <a href="../index.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">HOME</a>
+          <a href="shop.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">SHOP</a>
+          <a href="stories.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
+          <a href="about.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">ABOUT</a>
+        </div>
+
+        <!-- Mobile Auth -->
+        <!-- State Before Login/register -->
+        <!-- <div class="flex items-center gap-2 pt-4 mt-4 border-t border-gray-200">
+          <a href="signin.html" class="text-sm text-gray-800">Sign in</a>
+          <span class="text-gray-300">/</span>
+          <a href="signup.html" class="text-sm text-gray-500">Sign up</a>
+        </div> -->
+
+        <!-- State After Login/register -->
+        <div class="flex items-center gap-2 pt-4 mt-4 border-t border-gray-200">
+          <a href="account.html" class="text-sm text-gray-800">Account</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HEADER TITLE -->
+  <div class="relative w-full h-48 md:h-56 lg:h-80 flex items-center justify-center bg-cover bg-center"
+    style="background-image: url('../../public/assets/bg-header.jpg');">
+    <!-- Konten Header -->
+    <div class="relative text-center text-white px-4">
+      <h1 class="text-3xl md:text-5xl font-bold">My Order</h1>
+      <nav class="mt-2 text-sm md:text-base font-light">
+        <a href="../index.html" class="text-gray-200 hover:underline">Home</a>
+        <span class="mx-2">→</span>
+        <a href="account.html" class="text-gray-200 hover:underline">Account</a>
+        <span class="mx-2">→</span>
+        <span class="text-gray-100 font-bold">My Order</span>
+      </nav>
+    </div>
+  </div>
+  <!-- HEADER TITLE END -->
+
+  <!-- MY ORDER -->
+  <section>
+    <div class="container mx-auto lg:px-12 px-4 pb-28">
+      <div class="flex gap-2 items-center mt-24 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-800" fill="none" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path
+              d="m4.988 17.452l5.75 3.448a2.45 2.45 0 0 0 2.524 0l5.75-3.448c.366-.219.67-.53.88-.901c.205-.37.315-.786.318-1.21V8.278a2.46 2.46 0 0 0-1.198-2.122l-5.75-3.065a2.51 2.51 0 0 0-2.524 0l-5.75 3.065A2.46 2.46 0 0 0 3.79 8.277v7.065c.003.423.113.839.318 1.209c.21.371.514.682.88.901M19.881 7.078L12 11.81" />
+            <path d="M4.119 7.078L12 11.81v9.44m4.38-8.316V9.179L8.066 4.522" />
+          </g>
+        </svg>
+        <h2 class="font-bold text-gray-800 leading-[5px] text-xl">My Order</h2>
+      </div>
+      <div id="hs-scroll-nav-tabs-centered" class="relative border-b border-gray-200 overflow-hidden"
+        data-hs-scroll-nav="">
+
+        <nav id="hs-tabs-centered"
+          class="hs-scroll-nav-body flex gap-x-8 snap-x snap-mandatory overflow-x-auto [&::-webkit-scrollbar]:h-0"
+          aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+          <button type="button"
+            class="snap-start hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none active"
+            id="tabs-centered-item-1" aria-selected="true" data-hs-tab="#tabs-centered-1"
+            aria-controls="tabs-centered-1" role="tab">
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7">
+                <path
+                  d="m20.27 7.796l-3.61 1.876l-4.392 2.236a.55.55 0 0 1-.536 0L7.341 9.672L3.73 7.796a.594.594 0 0 1 0-1.06l8.014-3.925a.57.57 0 0 1 .512 0l8.014 3.925a.594.594 0 0 1 0 1.06" />
+                <path
+                  d="m7.34 9.672l-3.61 1.723a.594.594 0 0 0 0 1.06l3.61 1.876l4.392 2.236a.55.55 0 0 0 .536 0l4.391-2.236l3.611-1.875a.594.594 0 0 0 0-1.014l-3.61-1.77" />
+                <path
+                  d="m7.34 14.33l-3.61 1.725a.594.594 0 0 0 0 1.06l8.002 4.065a.55.55 0 0 0 .536 0l8.002-4.065a.594.594 0 0 0 0-1.014l-3.61-1.77" />
+              </g>
+            </svg>
+            <span class="leading-[5px]">All Orders</span>
+          </button>
+          <button type="button"
+            class="snap-start hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+            id="tabs-centered-item-2" aria-selected="false" data-hs-tab="#tabs-centered-2"
+            aria-controls="tabs-centered-2" role="tab">
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <defs>
+                <path id="solarWalletMoneyOutline0" fill="currentColor" d="M19 14a1 1 0 1 1-2 0a1 1 0 0 1 2 0" />
+              </defs>
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M20.924 11.75H18.23c-1.424 0-2.481 1.059-2.481 2.25s1.057 2.25 2.48 2.25h2.718c.206-.013.295-.152.302-.236v-4.028c-.007-.084-.096-.223-.302-.235zm-.074-1.5q.1-.001.19.004c.87.053 1.641.71 1.706 1.628c.004.06.004.125.004.185v3.866c0 .06 0 .125-.004.185c-.065.918-.836 1.575-1.707 1.629q-.089.004-.19.003h-2.618c-2.145 0-3.981-1.628-3.981-3.75s1.836-3.75 3.98-3.75z"
+                clip-rule="evenodd" stroke-width="0.5" stroke="currentColor" />
+              <use href="#solarWalletMoneyOutline0" />
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M20.85 10.25q.1-.001.19.004c.225.013.443.067.645.156c-.107-1.606-.402-2.844-1.326-3.769c-.749-.748-1.698-1.08-2.87-1.238l-.042-.005l-.032-.023l-3.736-2.477a3.99 3.99 0 0 0-4.358 0L5.586 5.375l-.033.023l-.042.005c-1.172.158-2.121.49-2.87 1.238c-.748.749-1.08 1.698-1.238 2.87c-.153 1.14-.153 2.595-.153 4.433v.112c0 1.838 0 3.294.153 4.433c.158 1.172.49 2.121 1.238 2.87c.749.748 1.698 1.08 2.87 1.238c1.14.153 2.595.153 4.433.153h3.112c1.838 0 3.294 0 4.433-.153c1.172-.158 2.121-.49 2.87-1.238c.924-.925 1.219-2.163 1.326-3.77q-.305.136-.646.158q-.089.004-.19.003h-.681c-.114 1.342-.371 2.05-.87 2.548c-.423.423-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-3c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289s.002-3.261.14-4.29c.135-1.005.389-1.585.812-2.008s1.003-.677 2.009-.812c1.028-.138 2.382-.14 4.289-.14h3c1.907 0 3.262.002 4.29.14c1.005.135 1.585.389 2.008.812c.499.498.756 1.207.87 2.548zm-10.906-5h3.112q.775 0 1.46.003L12.85 4.148c-.8-.53-1.9-.53-2.7 0L8.483 5.253q.686-.004 1.46-.003"
+                clip-rule="evenodd" stroke-width="0.5" stroke="currentColor" />
+              <path fill="currentColor" d="M6 9.25a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5z" stroke-width="0.5"
+                stroke="currentColor" />
+              <use href="#solarWalletMoneyOutline0" fill-rule="evenodd" clip-rule="evenodd" />
+            </svg>
+            <span class="leading-[5px]">Waiting for Payment</span>
+          </button>
+          <button type="button"
+            class="snap-start hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+            id="tabs-centered-item-3" aria-selected="false" data-hs-tab="#tabs-centered-3"
+            aria-controls="tabs-centered-3" role="tab">
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                d="M11 22c-.818 0-1.6-.33-3.163-.99C3.946 19.366 2 18.543 2 17.16V7m9 15V11.355M11 22c.34 0 .646-.057 1-.172M20 7v4.5M18 18l.906-.905M22 18a4 4 0 1 0-8 0a4 4 0 0 0 8 0M7.326 9.691L4.405 8.278C2.802 7.502 2 7.114 2 6.5s.802-1.002 2.405-1.778l2.92-1.413C9.13 2.436 10.03 2 11 2s1.871.436 3.674 1.309l2.921 1.413C19.198 5.498 20 5.886 20 6.5s-.802 1.002-2.405 1.778l-2.92 1.413C12.87 10.564 11.97 11 11 11s-1.871-.436-3.674-1.309M5 12l2 1m9-9L6 9"
+                color="currentColor" />
+            </svg>
+            <span class="leading-[5px]">Processing</span>
+          </button>
+          <button type="button"
+            class="snap-start hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+            id="tabs-centered-item-4" aria-selected="false" data-hs-tab="#tabs-centered-4"
+            aria-controls="tabs-centered-4" role="tab">
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M4 16h12v2H4zm-2-5h10v2H2z" stroke-width=".5" stroke="currentColor" />
+              <path fill="currentColor"
+                d="m29.919 16.606l-3-7A1 1 0 0 0 26 9h-3V7a1 1 0 0 0-1-1H6v2h15v12.556A4 4 0 0 0 19.142 23h-6.284a4 4 0 1 0 0 2h6.284a3.98 3.98 0 0 0 7.716 0H29a1 1 0 0 0 1-1v-7a1 1 0 0 0-.081-.394M9 26a2 2 0 1 1 2-2a2 2 0 0 1-2 2m14-15h2.34l2.144 5H23Zm0 15a2 2 0 1 1 2-2a2 2 0 0 1-2 2m5-3h-1.142A3.995 3.995 0 0 0 23 20v-2h5Z"
+                stroke-width=".5" stroke="currentColor" />
+            </svg>
+            <span class="leading-[5px]">Shipped</span>
+          </button>
+          <button type="button"
+            class="snap-start hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+            id="tabs-centered-item-5" aria-selected="false" data-hs-tab="#tabs-centered-5"
+            aria-controls="tabs-centered-5" role="tab">
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-width="1.7">
+                <circle cx="12" cy="12" r="9.25" />
+                <path stroke-linecap="round" d="m8.875 8.875l6.25 6.25m0-6.25l-6.25 6.25" />
+              </g>
+            </svg>
+            <span class="leading-[5px]">Canceled</span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="mt-3">
+        <div id="tabs-centered-1" role="tabpanel" aria-labelledby="tabs-centered-item-1">
+          <div class="bg-slate-100 flex flex-col gap-6">
+
+            <!-- Order Card 1 -->
+            <div class="flex flex-col py-6 bg-white">
+              <!-- Header Status -->
+              <div class="flex justify-between my-4">
+                <h1 class="text-gray-800 font-semibold">Order Status</h1>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-4 rounded-full text-xs font-medium bg-teal-100 text-teal-800">Done Bang</span>
+              </div>
+
+              <!-- Order Item 1 -->
+              <div class="bg-white border-t p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE FLUTTER + LARAVEL BWA - Pemrograman Studi Kasus Buat Aplikasi Ewallet
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp999</p>
+                </div>
+              </div>
+
+              <!-- Order Item 2 -->
+              <div class="bg-white border-t rounded-lg p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE LARAVEL 9 + REACT JS BWA - Studi Kasus Membuat Web Mirip Netflix
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp1.500</p>
+                </div>
+              </div>
+
+              <!-- Order Item 3 -->
+              <div class="bg-white border-t rounded-lg p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    FLUTTER Full-Stack BWA Mobile Apps - Study Kasus
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp1.500</p>
+                </div>
+              </div>
+
+              <!-- Order Item 4 -->
+              <div class="bg-white border-t rounded-lg p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    3D BLENDER LOW POLY ART
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp5.000</p>
+                </div>
+              </div>
+
+              <!-- Total and Actions Section -->
+              <div class="bg-white border-t rounded-lg p-4">
+                <div class="flex justify-end gap-2 items-center mb-4">
+                  <span class="text-sm text-gray-600">Total Pesanan:</span>
+                  <span class="text-lg font-bold text-gray-800">Rp10.999</span>
+                </div>
+
+                <div class="flex justify-end flex-wrap gap-2">
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                    Details
+                  </a>
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none">
+                    Leave a Review
+                  </a>
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none">
+                    Mark as Completed Order
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Card 2 -->
+            <div class="flex flex-col py-6 bg-white">
+              <!-- Header Status -->
+              <div class="flex justify-between my-4">
+                <h1 class="text-gray-800 font-semibold">Order Status</h1>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-4 rounded-full text-xs font-medium bg-teal-100 text-teal-800">Done Bang</span>
+              </div>
+
+              <!-- Order Item 1 -->
+              <div class="bg-white border-t p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE FLUTTER + LARAVEL BWA - Pemrograman Studi Kasus Buat Aplikasi Ewallet
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp999</p>
+                </div>
+              </div>
+
+              <!-- Order Item 2 -->
+              <div class="bg-white border-t rounded-lg p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE LARAVEL 9 + REACT JS BWA - Studi Kasus Membuat Web Mirip Netflix
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp1.500</p>
+                </div>
+              </div>
+
+              <!-- Total and Actions Section -->
+              <div class="bg-white border-t rounded-lg p-4">
+                <div class="flex justify-end gap-2 items-center mb-4">
+                  <span class="text-sm text-gray-600">Total Pesanan:</span>
+                  <span class="text-lg font-bold text-gray-800">Rp10.999</span>
+                </div>
+
+                <div class="flex justify-end flex-wrap gap-2">
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                    Details
+                  </a>
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none">
+                    Show Review
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tabs-centered-2" class="hidden" role="tabpanel" aria-labelledby="tabs-centered-item-2">
+          <div class="bg-slate-100 flex flex-col gap-6">
+
+            <!-- Order Card 1 -->
+            <div class="flex flex-col py-6 bg-white">
+              <!-- Header Status -->
+              <div class="flex justify-between my-4">
+                <h1 class="text-gray-800 font-semibold">Order Status</h1>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 ">Waiting for Payment</span>
+              </div>
+
+              <!-- Order Item 1 -->
+              <div class="bg-white border-t p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE FLUTTER + LARAVEL BWA - Pemrograman Studi Kasus Buat Aplikasi Ewallet
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp999</p>
+                </div>
+              </div>
+
+              <!-- Total and Actions Section -->
+              <div class="bg-white border-t rounded-lg p-4">
+                <div class="flex justify-end gap-2 items-center mb-4">
+                  <span class="text-sm text-gray-600">Total Pesanan:</span>
+                  <span class="text-lg font-bold text-gray-800">Rp10.999</span>
+                </div>
+
+                <div class="flex justify-end flex-wrap gap-2">
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                    Details
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Card 2 -->
+            <div class="flex flex-col py-6 bg-white">
+              <!-- Header Status -->
+              <div class="flex justify-between my-4">
+                <h1 class="text-gray-800 font-semibold">Order Status</h1>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 ">Waiting for Payment</span>
+              </div>
+
+              <!-- Order Item 1 -->
+              <div class="bg-white border-t p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE FLUTTER + LARAVEL BWA - Pemrograman Studi Kasus Buat Aplikasi Ewallet
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp999</p>
+                </div>
+              </div>
+
+              <!-- Order Item 2 -->
+              <div class="bg-white border-t rounded-lg p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE LARAVEL 9 + REACT JS BWA - Studi Kasus Membuat Web Mirip Netflix
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp1.500</p>
+                </div>
+              </div>
+
+              <!-- Total and Actions Section -->
+              <div class="bg-white border-t rounded-lg p-4">
+                <div class="flex justify-end gap-2 items-center mb-4">
+                  <span class="text-sm text-gray-600">Total Pesanan:</span>
+                  <span class="text-lg font-bold text-gray-800">Rp10.999</span>
+                </div>
+
+                <div class="flex justify-end flex-wrap gap-2">
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                    Details
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tabs-centered-3" class="hidden" role="tabpanel" aria-labelledby="tabs-centered-item-3">
+          <div class="bg-slate-100 flex flex-col gap-6">
+
+            <!-- Order Card 1 -->
+            <div class="flex flex-col py-6 bg-white">
+              <!-- Header Status -->
+              <div class="flex justify-between my-4">
+                <h1 class="text-gray-800 font-semibold">Order Status</h1>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 ">Processed by The Seller</span>
+              </div>
+
+              <!-- Order Item 1 -->
+              <div class="bg-white border-t p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE FLUTTER + LARAVEL BWA - Pemrograman Studi Kasus Buat Aplikasi Ewallet
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp999</p>
+                </div>
+              </div>
+
+              <!-- Total and Actions Section -->
+              <div class="bg-white border-t rounded-lg p-4">
+                <div class="flex justify-end gap-2 items-center mb-4">
+                  <span class="text-sm text-gray-600">Total Pesanan:</span>
+                  <span class="text-lg font-bold text-gray-800">Rp10.999</span>
+                </div>
+
+                <div class="flex justify-end flex-wrap gap-2">
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                    Details
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Card 2 -->
+            <div class="flex flex-col py-6 bg-white">
+              <!-- Header Status -->
+              <div class="flex justify-between my-4">
+                <h1 class="text-gray-800 font-semibold">Order Status</h1>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 ">Processed by The Seller</span>
+              </div>
+
+              <!-- Order Item 1 -->
+              <div class="bg-white border-t p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE FLUTTER + LARAVEL BWA - Pemrograman Studi Kasus Buat Aplikasi Ewallet
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp999</p>
+                </div>
+              </div>
+
+              <!-- Order Item 2 -->
+              <div class="bg-white border-t rounded-lg p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE LARAVEL 9 + REACT JS BWA - Studi Kasus Membuat Web Mirip Netflix
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp1.500</p>
+                </div>
+              </div>
+
+              <!-- Total and Actions Section -->
+              <div class="bg-white border-t rounded-lg p-4">
+                <div class="flex justify-end gap-2 items-center mb-4">
+                  <span class="text-sm text-gray-600">Total Pesanan:</span>
+                  <span class="text-lg font-bold text-gray-800">Rp10.999</span>
+                </div>
+
+                <div class="flex justify-end flex-wrap gap-2">
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                    Details
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tabs-centered-4" class="hidden" role="tabpanel" aria-labelledby="tabs-centered-item-4">
+          <div class="bg-slate-100 flex flex-col gap-6">
+
+            <!-- Order Card 1 -->
+            <div class="flex flex-col py-6 bg-white">
+              <!-- Header Status -->
+              <div class="flex justify-between my-4">
+                <h1 class="text-gray-800 font-semibold">Order Status</h1>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800">On Delivery</span>
+              </div>
+
+              <!-- Order Item 1 -->
+              <div class="bg-white border-t p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE FLUTTER + LARAVEL BWA - Pemrograman Studi Kasus Buat Aplikasi Ewallet
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp999</p>
+                </div>
+              </div>
+
+              <!-- Total and Actions Section -->
+              <div class="bg-white border-t rounded-lg p-4">
+                <div class="flex justify-end gap-2 items-center mb-4">
+                  <span class="text-sm text-gray-600">Total Pesanan:</span>
+                  <span class="text-lg font-bold text-gray-800">Rp10.999</span>
+                </div>
+
+                <div class="flex justify-end flex-wrap gap-2">
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                    Details
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Card 2 -->
+            <div class="flex flex-col py-6 bg-white">
+              <!-- Header Status -->
+              <div class="flex justify-between my-4">
+                <h1 class="text-gray-800 font-semibold">Order Status</h1>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800">On Delivery</span>
+              </div>
+
+              <!-- Order Item 1 -->
+              <div class="bg-white border-t p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE FLUTTER + LARAVEL BWA - Pemrograman Studi Kasus Buat Aplikasi Ewallet
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp999</p>
+                </div>
+              </div>
+
+              <!-- Order Item 2 -->
+              <div class="bg-white border-t rounded-lg p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE LARAVEL 9 + REACT JS BWA - Studi Kasus Membuat Web Mirip Netflix
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp1.500</p>
+                </div>
+              </div>
+
+              <!-- Total and Actions Section -->
+              <div class="bg-white border-t rounded-lg p-4">
+                <div class="flex justify-end gap-2 items-center mb-4">
+                  <span class="text-sm text-gray-600">Total Pesanan:</span>
+                  <span class="text-lg font-bold text-gray-800">Rp10.999</span>
+                </div>
+
+                <div class="flex justify-end flex-wrap gap-2">
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                    Details
+                  </a>
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none">
+                    Track Order
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tabs-centered-5" class="hidden" role="tabpanel" aria-labelledby="tabs-centered-item-5">
+          <div class="bg-slate-100 flex flex-col gap-6">
+
+            <!-- Order Card 1 -->
+            <div class="flex flex-col py-6 bg-white">
+              <!-- Header Status -->
+              <div class="flex justify-between my-4">
+                <h1 class="text-gray-800 font-semibold">Order Status</h1>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-red-100 text-red-800">Canceled</span>
+              </div>
+
+              <!-- Order Item 1 -->
+              <div class="bg-white border-t p-4 flex items-center">
+                <img src="../../public/assets/laptop_bag.webp" alt="Product Image"
+                  class="w-20 h-20 object-cover mr-4 rounded-md">
+                <div class="flex-grow">
+                  <h3 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                    COMPLETE FLUTTER + LARAVEL BWA - Pemrograman Studi Kasus Buat Aplikasi Ewallet
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">x1</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm font-bold text-gray-900">Rp999</p>
+                </div>
+              </div>
+
+              <!-- Total and Actions Section -->
+              <div class="bg-white border-t rounded-lg p-4">
+                <div class="flex justify-end gap-2 items-center mb-4">
+                  <span class="text-sm text-gray-600">Total Pesanan:</span>
+                  <span class="text-lg font-bold text-gray-800">Rp10.999</span>
+                </div>
+
+                <div class="flex justify-end flex-wrap gap-2">
+                  <a href="#" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                    Details
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- MY ORDER END -->
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-white border-gray-300 py-10">
+    <!-- Social Media Icons -->
+    <div class="text-center border-t border-b border-gray-300 py-6">
+      <h3 class="text-lg font-semibold text-gray-800">Follow Us</h3>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#"
+          class="relative w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 overflow-hidden group">
+          <span
+            class="absolute inset-0 bg-gradient-to-bl from-[#AE16D0] to-[#FEA91A] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+          <svg class="relative z-10 text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M12 7.9a4.1 4.1 0 1 0 4.1 4.1A4.09 4.09 0 0 0 12 7.9m0 6.77A2.67 2.67 0 1 1 14.67 12A2.67 2.67 0 0 1 12 14.67m5.23-6.94a1 1 0 1 1-1-1a1 1 0 0 1 1 1m2.71 1a4.7 4.7 0 0 0-1.29-3.35a4.7 4.7 0 0 0-3.35-1.32C14 4 10 4 8.7 4.06a4.73 4.73 0 0 0-3.35 1.29A4.7 4.7 0 0 0 4.06 8.7C4 10 4 14 4.06 15.3a4.7 4.7 0 0 0 1.29 3.35a4.73 4.73 0 0 0 3.35 1.29c1.32.08 5.28.08 6.6 0a4.7 4.7 0 0 0 3.35-1.29a4.7 4.7 0 0 0 1.29-3.35c.06-1.3.06-5.3 0-6.6Zm-1.7 8a2.7 2.7 0 0 1-1.52 1.52a18 18 0 0 1-4.72.32a18 18 0 0 1-4.71-.32a2.7 2.7 0 0 1-1.52-1.52c-.42-1.06-.33-3.56-.33-4.72s-.09-3.67.33-4.72a2.65 2.65 0 0 1 1.52-1.53A18 18 0 0 1 12 5.44a18 18 0 0 1 4.72.32a2.7 2.7 0 0 1 1.52 1.52c.42 1.06.32 3.56.32 4.72s.1 3.67-.32 4.72Z" />
+          </svg>
+        </a>
+        <a href="#"
+          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-900 group transition duration-500">
+          <svg class="text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M19 10.56a6.57 6.57 0 0 1-3.838-1.229v5.588a5.082 5.082 0 1 1-4.38-5.035v2.81a2.33 2.33 0 1 0 1.63 2.225V4h2.75q-.002.35.06.694A3.82 3.82 0 0 0 16.906 7.2c.621.41 1.35.629 2.094.628z" />
+          </svg>
+        </a>
+        <a href="#"
+          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-red-600 group transition duration-500">
+          <svg class="text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14 12l-3.5 2v-4z" />
+              <path
+                d="M2 12.708v-1.416c0-2.895 0-4.343.905-5.274c.906-.932 2.332-.972 5.183-1.053C9.438 4.927 10.818 4.9 12 4.9s2.561.027 3.912.065c2.851.081 4.277.121 5.182 1.053S22 8.398 22 11.292v1.415c0 2.896 0 4.343-.905 5.275c-.906.931-2.331.972-5.183 1.052c-1.35.039-2.73.066-3.912.066s-2.561-.027-3.912-.066c-2.851-.08-4.277-.12-5.183-1.052S2 15.602 2 12.708Z" />
+            </g>
+          </svg>
+        </a>
+        <a href="#"
+          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-900 group transition duration-500">
+          <svg class="text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+            viewBox="0 0 14 14">
+            <g fill="none">
+              <g clip-path="url(#primeTwitter0)">
+                <path fill="currentColor"
+                  d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
+              </g>
+              <defs>
+                <clipPath id="primeTwitter0">
+                  <path fill="#fff" d="M0 0h14v14H0z" />
+                </clipPath>
+              </defs>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="container mx-auto px-6 text-center space-y-6">
+      <!-- Logo & Description -->
+      <div class="text-gray-600 max-w-2xl mx-auto">
+        <img src="../../public/assets/Sidnov-Logo.png" alt="SIDNOV INDONESIA" class="mx-auto mb-4 w-20">
+        <p class="text-sm">
+          Handmade Bags with a Cultural Touch!
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold text-gray-800">Quick Links</h3>
+        <div class="flex justify-center space-x-6 mt-4">
+          <a href="../index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+          <a href="shop.html" class="text-gray-600 hover:text-gray-900 transition">Shop</a>
+          <a href="stories.html" class="text-gray-600 hover:text-gray-900 transition">Stories</a>
+          <a href="about.html
+          about.html" class="text-gray-600 hover:text-gray-900 transition">About</a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-gray-300 pt-6 text-gray-500 text-sm font-medium">
+        Copyright © 2025 All rights reserved | <a href="#" class="hover:font-bold hover:text-gray-800">SIDNOV
+          INDONESIA</a><br>Made by <a href="https://github.com/fe-husni"
+          class="hover:font-bold hover:text-gray-800">HM</a> & <a href="https://github.com/adenafil"
+          class="hover:font-bold hover:text-gray-800">ANF</a>
+      </div>
+
+    </div>
+  </footer>
+  <!-- FOOTER END-->
+
+  <script>
+    window.addEventListener('load', () => {
+      (function () {
+        const tabs = HSTabs.getInstance("#hs-tabs-centered", true);
+        const scrollNav = HSScrollNav.getInstance('#hs-scroll-nav-tabs-centered', true);
+
+        tabs.element.on('change', ({ el }) => {
+          scrollNav.element.centerElement(el);
+        });
+
+        window.addEventListener('resize', _.debounce(() => {
+          scrollNav.element.centerElement(tabs.element.current);
+        }, 100));
+      })();
+    });
+  </script>
+
+  <!-- Preline Library -->
+  <script src="../../public/js/preline.js"></script>
+
+  <!-- Lodash Plugin -->
+  <script src="../../node_modules/lodash/lodash.min.js"></script>
+</body>
+
+</html>
