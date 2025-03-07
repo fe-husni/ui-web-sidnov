@@ -2254,8 +2254,8 @@ html{
   --tw-bg-opacity: 0.8;
 }
 
-.bg-\[url\(\'\.\.\/\.\.\/public\/assets\/icon\/border-kop\.svg\'\)\]{
-  background-image: url('../../public/assets/icon/border-kop.svg');
+.bg-\[url\(\'https\:\/\/raw\.githubusercontent\.com\/fe-husni\/ui-web-sidnov\/refs\/heads\/main\/public\/assets\/icon\/border-kop\.svg\'\)\]{
+  background-image: url('https://raw.githubusercontent.com/fe-husni/ui-web-sidnov/refs/heads/main/public/assets/icon/border-kop.svg');
 }
 
 .bg-gradient-to-bl{
