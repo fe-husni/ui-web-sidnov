@@ -2925,6 +2925,29 @@ html{
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.file\:me-4::file-selector-button{
+  margin-inline-end: 1rem;
+}
+
+.file\:border-0::file-selector-button{
+  border-width: 0px;
+}
+
+.file\:bg-gray-50::file-selector-button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+}
+
+.file\:px-4::file-selector-button{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.file\:py-3::file-selector-button{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .placeholder\:text-gray-400::-moz-placeholder{
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
@@ -3289,6 +3312,10 @@ html{
 
 .hover\:opacity-85:hover{
   opacity: 0.85;
+}
+
+.focus\:z-10:focus{
+  z-index: 10;
 }
 
 .focus\:border:focus{
