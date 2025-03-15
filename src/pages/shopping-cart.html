@@ -153,6 +153,20 @@
   </div>
   <!-- HEADER TITLE END -->
 
+  <!-- STATE KETIKA CART KOSONG -->
+  <section>
+    <div
+      class="container mx-auto flex flex-col max-w-xs md:max-w-md justify-center items-center gap-4 px-4 lg:px-12 pt-8 pb-24">
+      <img src="../../public/assets/empty_cart.jpg" alt="shopping cart empty">
+      <h1 class="text-gray-800 font-bold text-xl md:text-3xl text-center">Oops, your cart is empty</h1>
+      <a href="shop.html">
+        <button type="button" class="w-full text-sm font-semibold py-3 px-4 bg-gray-900 text-white hover:bg-gray-800">
+          Shop Now
+        </button>
+      </a>
+    </div>
+  </section>
+
 
   <!-- CART -->
   <section>
@@ -280,134 +294,168 @@
             <p class="text-gray-600">Subtotal (2 items): <span class="font-medium text-gray-900">Rp 495.000</span></p>
           </div>
 
-          <!-- Important Note -->
-          <div class="bg-pink-100 border-double border-4 border-red-500 p-4 md:py-8 md:px-24 mb-6">
-            <p class="text-gray-800">
-              <span class="font-medium">IMPORTANT NOTE:</span><br>
-              To checkout more items of the same type with a quantity of more than 1, please
-              ask for stock availability with the admin first! Enjoy a smooth and safe shopping
-              experience with us! 👍
-            </p>
-          </div>
+          <div class="flex flex-col lg:flex-row gap-x-10">
+            <!-- Important Note -->
+            <div class="bg-pink-100 border-double border-4 border-red-500 p-4 md:py-8 md:px-24 mb-6 max-h-fit">
+              <p class="text-gray-800">
+                <span class="font-medium">IMPORTANT NOTE:</span><br>
+                To checkout more items of the same type with a quantity of more than 1, please
+                ask for stock availability with the admin first! Enjoy a smooth and safe shopping
+                experience with us! 👍
+              </p>
+            </div>
 
-          <!-- Order Summary Section -->
-          <div class="md:flex md:justify-end">
-            <div class="w-full md:w-96">
-              <!-- Voucher Button (replacing Discount Code) -->
-              <div class="mb-6">
-                <h3 class="font-medium mb-4">VOUCHER</h3>
-                <div class="flex w-full border border-gray-300 rounded py-2 px-4 justify-between items-center bg-white">
-                  <span id="selectedVoucherText" class="text-gray-500">Select a voucher</span>
-                  <button type="button" class="text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
-                    aria-haspopup="dialog" aria-expanded="false" aria-controls="voucher-modal"
-                    data-hs-overlay="#voucher-modal">
-                    Use Voucher
-                  </button>
-                </div>
-              </div>
+            <!-- Order Summary Section -->
+            <div class="md:flex md:justify-end px-1">
+              <div class="w-full md:w-96">
 
-              <!-- Cashback Points Toggle -->
-              <div class="mb-6">
-                <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-medium">USE CASHBACK POINTS</h3>
-                  <div class="flex items-center mr-2">
-                    <input type="checkbox" id="cashbackToggle"
-                      class="relative w-[35px] h-[21px] bg-gray-100 border-transparent text-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none checked:bg-none checked:text-blue-600 checked:border-blue-600 focus:checked:border-blue-600
-        before:inline-block before:size-4 before:bg-white checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:rounded-full before:shadow before:transform before:ring-0 before:transition before:ease-in-out before:duration-200">
-                  </div>
-                </div>
-                <div id="cashbackInfo" class="text-sm text-gray-600">
-                  <p>Available cashback points: <span class="font-bold text-yellow-500">Rp 44.000</span></p>
-                </div>
-              </div>
+                <!-- SELECT SHIPPING SERVICE -->
+                <div class="mb-6">
+                  <h3 class="font-medium mb-4">SHIPPING SERVCIE</h3>
+                  <div class="relative">
+                    <select data-hs-select='{
+                        "placeholder": "Select Shipping Service...",
+                        "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
+                        "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-3 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500",
+                        "dropdownClasses": "mt-2 z-50 w-full max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto",
+                        "optionClasses": "py-2 px-4 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-hidden focus:bg-gray-100",
+                        "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
+                      }'>
+                      <option value="">Choose</option>
+                      <option>JNE <span>- Rp 17.000</span></option>
+                      <option>JNT <span>- Rp 20.000</span></option>
+                      <option>SICEPAT <span>- Rp 9.000</span></option>
+                    </select>
 
-              <!-- Order Summary -->
-              <div class="bg-white p-6 rounded-lg shadow-sm">
-                <h3 class="font-medium mb-4">ORDER SUMMARY</h3>
-                <div class="space-y-3 pb-4 mb-4 border-b">
-                  <div class="flex justify-between text-gray-600">
-                    <span>Subtotal</span>
-                    <span>Rp 495.000</span>
-                  </div>
-                  <div class="flex justify-between text-gray-600">
-                    <span>Delivery</span>
-                    <span>Rp 30.000</span>
-                  </div>
-                  <!-- Voucher Discount (initially hidden) -->
-                  <div id="voucherDiscount" class="flex justify-between text-green-600 hidden">
-                    <span>Voucher Cashback</span>
-                    <span>+ Rp 75.000</span>
-                  </div>
-                  <!-- Cashback Points -->
-                  <div class="mb-6">
-                    <h3 class="font-medium mb-2">CASHBACK POINTS</h3>
-                    <div class="text-sm text-gray-600">
-                      <p>Available cashback points: <span class="font-medium">Rp 44.000</span></p>
+                    <div class="absolute top-1/2 end-2.5 -translate-y-1/2">
+                      <svg class="shrink-0 size-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m7 15 5 5 5-5"></path>
+                        <path d="m7 9 5-5 5 5"></path>
+                      </svg>
                     </div>
                   </div>
                 </div>
-                <div class="flex justify-between text-lg font-medium mb-6">
-                  <span>TOTAL</span>
-                  <span id="totalAmount">Rp 525.000</span>
+
+                <!-- Voucher Button (replacing Discount Code) -->
+                <div class="mb-6">
+                  <h3 class="font-medium mb-4">VOUCHER</h3>
+                  <div
+                    class="flex w-full border border-gray-300 rounded py-2 px-4 justify-between items-center bg-white">
+                    <span id="selectedVoucherText" class="text-gray-500">Select a voucher</span>
+                    <button type="button" class="text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                      aria-haspopup="dialog" aria-expanded="false" aria-controls="voucher-modal"
+                      data-hs-overlay="#voucher-modal">
+                      Use Voucher
+                    </button>
+                  </div>
                 </div>
 
-                <!-- Checkout Buttons -->
-                <div class="flex flex-col gap-y-2">
-                  <a href="#">
-                    <button type="button"
-                      class="w-full text-sm font-semibold py-3 px-4 bg-gray-900 text-white hover:bg-gray-800">
-                      Checkout With Payment Method
-                    </button>
-                  </a>
-                  <button type="button"
-                    class="w-full justify-center py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold border bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
-                    aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-vertically-centered-scrollable-modal"
-                    data-hs-overlay="#hs-vertically-centered-scrollable-modal">
-                    Checkout Manually
-                  </button>
-                  <!-- REVIEW MODAL -->
-                  <div id="hs-vertically-centered-scrollable-modal"
-                    class="hs-overlay hidden size-full fixed top-0 start-0 z-50 overflow-x-hidden overflow-y-auto pointer-events-none"
-                    role="dialog" tabindex="-1" aria-labelledby="hs-vertically-centered-scrollable-modal-label">
-                    <div
-                      class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto h-[calc(100%-56px)] min-h-[calc(100%-56px)] flex items-center">
-                      <div
-                        class="w-full max-h-full overflow-hidden flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl pointer-events-auto">
-                        <div class="flex justify-between items-center py-3 px-4 border-b border-gray-200">
-                          <h3 id="hs-vertically-centered-scrollable-modal-label" class="font-bold text-gray-800">
-                            Manual Payment Confirmation
-                          </h3>
-                          <button type="button"
-                            class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
-                            aria-label="Close" data-hs-overlay="#hs-vertically-centered-scrollable-modal">
-                            <span class="sr-only">Close</span>
-                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                              stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M18 6 6 18"></path>
-                              <path d="m6 6 12 12"></path>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="p-4 overflow-y-auto">
-                          <div class="flex flex-col gap-y-4">
-                            <div class="flex flex-col gap-4 justify-center">
-                              <p class="text-center">Thank you for shopping at SIDNOV! If you have made a payment by
-                                BANK TRANSFER, please confirm your payment here so that we can process it immediately.
-                              </p>
 
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">Order Number</span>
-                                <div class="relative">
-                                  <input type="text" name="order-number" id="hs-floating-gray-input-numorder"
-                                    autocomplete="email" class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
+                <!-- Cashback Points Toggle -->
+                <div class="mb-6">
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-medium">USE CASHBACK POINTS</h3>
+                    <div class="flex items-center mr-2">
+                      <input type="checkbox" id="cashbackToggle"
+                        class="relative w-[35px] h-[21px] bg-gray-100 border-transparent text-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none checked:bg-none checked:text-blue-600 checked:border-blue-600 focus:checked:border-blue-600
+        before:inline-block before:size-4 before:bg-white checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:rounded-full before:shadow before:transform before:ring-0 before:transition before:ease-in-out before:duration-200">
+                    </div>
+                  </div>
+                  <div id="cashbackInfo" class="text-sm text-gray-600">
+                    <p>Available cashback points: <span class="font-bold text-yellow-500">Rp 44.000</span></p>
+                  </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 class="font-medium mb-4">ORDER SUMMARY</h3>
+                  <div class="space-y-3 pb-4 mb-4 border-b">
+                    <div class="flex justify-between text-gray-600">
+                      <span>Subtotal</span>
+                      <span>Rp 495.000</span>
+                    </div>
+                    <div class="flex justify-between text-gray-600">
+                      <span>Delivery</span>
+                      <span>Rp 30.000</span>
+                    </div>
+                    <!-- Voucher Discount (initially hidden) -->
+                    <div id="voucherDiscount" class="flex justify-between text-green-600 hidden">
+                      <span>Voucher Cashback</span>
+                      <span>+ Rp 75.000</span>
+                    </div>
+                    <!-- Cashback Points -->
+                    <div class="mb-6">
+                      <h3 class="font-medium mb-2">CASHBACK POINTS</h3>
+                      <div class="text-sm text-gray-600">
+                        <p>Available cashback points: <span class="font-medium">Rp 44.000</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-between text-lg font-medium mb-6">
+                    <span>TOTAL</span>
+                    <span id="totalAmount">Rp 525.000</span>
+                  </div>
+
+                  <!-- Checkout Buttons -->
+                  <div class="flex flex-col gap-y-2">
+                    <a href="#">
+                      <button type="button"
+                        class="w-full text-sm font-semibold py-3 px-4 bg-gray-900 text-white hover:bg-gray-800">
+                        Checkout With Payment Method
+                      </button>
+                    </a>
+                    <button type="button"
+                      class="w-full justify-center py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold border bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+                      aria-haspopup="dialog" aria-expanded="false"
+                      aria-controls="hs-vertically-centered-scrollable-modal"
+                      data-hs-overlay="#hs-vertically-centered-scrollable-modal">
+                      Checkout Manually
+                    </button>
+                    <!-- REVIEW MODAL -->
+                    <div id="hs-vertically-centered-scrollable-modal"
+                      class="hs-overlay hidden size-full fixed top-0 start-0 z-50 overflow-x-hidden overflow-y-auto pointer-events-none"
+                      role="dialog" tabindex="-1" aria-labelledby="hs-vertically-centered-scrollable-modal-label">
+                      <div
+                        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto h-[calc(100%-56px)] min-h-[calc(100%-56px)] flex items-center">
+                        <div
+                          class="w-full max-h-full overflow-hidden flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl pointer-events-auto">
+                          <div class="flex justify-between items-center py-3 px-4 border-b border-gray-200">
+                            <h3 id="hs-vertically-centered-scrollable-modal-label" class="font-bold text-gray-800">
+                              Manual Payment Confirmation
+                            </h3>
+                            <button type="button"
+                              class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+                              aria-label="Close" data-hs-overlay="#hs-vertically-centered-scrollable-modal">
+                              <span class="sr-only">Close</span>
+                              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 6 6 18"></path>
+                                <path d="m6 6 12 12"></path>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="p-4 overflow-y-auto">
+                            <div class="flex flex-col gap-y-4">
+                              <div class="flex flex-col gap-4 justify-center">
+                                <p class="text-center">Thank you for shopping at SIDNOV! If you have made a payment by
+                                  BANK TRANSFER, please confirm your payment here so that we can process it immediately.
+                                </p>
+
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">Order Number</span>
+                                  <div class="relative">
+                                    <input type="text" name="order-number" id="hs-floating-gray-input-numorder"
+                                      autocomplete="email" class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
                                   focus:pt-6
                                   focus:pb-2
                                   [&:not(:placeholder-shown)]:pt-6
                                   [&:not(:placeholder-shown)]:pb-2
                                   autofill:pt-6
                                   autofill:pb-2" value="2502146NTKTF6E" readonly>
-                                  <label for="hs-floating-gray-input-numorder" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                    <label for="hs-floating-gray-input-numorder" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                                     peer-focus:scale-90
                                     peer-focus:translate-x-0.5
                                     peer-focus:-translate-y-1.5
@@ -416,23 +464,23 @@
                                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
                                     peer-[:not(:placeholder-shown)]:text-gray-500">Order Number</label>
+                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">Destination Bank</span>
-                                <div class="relative">
-                                  <select name="admin-bank" id="admin-bank" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">Destination Bank</span>
+                                  <div class="relative">
+                                    <select name="admin-bank" id="admin-bank" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                                   focus:pt-6
                                   focus:pb-2
                                   [&:not(:placeholder-shown)]:pt-6
                                   [&:not(:placeholder-shown)]:pb-2" required>
-                                    <option selected="">Select your destination bank</option>
-                                    <option>BCA</option>
-                                    <option>BNI</option>
-                                    <option>BRI</option>
-                                  </select>
-                                  <label for="admin-bank" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                      <option selected="">Select your destination bank</option>
+                                      <option>BCA</option>
+                                      <option>BNI</option>
+                                      <option>BRI</option>
+                                    </select>
+                                    <label for="admin-bank" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                                     peer-focus:scale-90
                                     peer-focus:translate-x-0.5
                                     peer-focus:-translate-y-1.5
@@ -441,21 +489,21 @@
                                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
                                     peer-[:not(:placeholder-shown)]:text-gray-500">Destination Bank</label>
+                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">Admin Bank Number</span>
-                                <div class="relative">
-                                  <input type="number" name="admin-bank-number"
-                                    id="hs-floating-gray-input-admin-bank-number" class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">Admin Bank Number</span>
+                                  <div class="relative">
+                                    <input type="number" name="admin-bank-number"
+                                      id="hs-floating-gray-input-admin-bank-number" class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
                                     focus:pt-6
                                     focus:pb-2
                                     [&:not(:placeholder-shown)]:pt-6
                                     [&:not(:placeholder-shown)]:pb-2
                                     autofill:pt-6
                                     autofill:pb-2" placeholder="Admin Bank Number" value="9000007510994" readonly>
-                                  <label for="hs-floating-gray-input-admin-bank-number" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                    <label for="hs-floating-gray-input-admin-bank-number" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                                     peer-focus:scale-90
                                     peer-focus:translate-x-0.5
                                     peer-focus:-translate-y-1.5
@@ -464,21 +512,21 @@
                                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
                                     peer-[:not(:placeholder-shown)]:text-gray-500">Admin Bank Number</label>
+                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">Recipient Name</span>
-                                <div class="relative">
-                                  <input type="text" name="recipient-name" id="hs-floating-gray-input-recipient-name"
-                                    class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">Recipient Name</span>
+                                  <div class="relative">
+                                    <input type="text" name="recipient-name" id="hs-floating-gray-input-recipient-name"
+                                      class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
                                     focus:pt-6
                                     focus:pb-2
                                     [&:not(:placeholder-shown)]:pt-6
                                     [&:not(:placeholder-shown)]:pb-2
                                     autofill:pt-6
                                     autofill:pb-2" placeholder="Recipient Name" value="Dona Doni" readonly>
-                                  <label for="hs-floating-gray-input-recipient-name" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                    <label for="hs-floating-gray-input-recipient-name" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                                     peer-focus:scale-90
                                     peer-focus:translate-x-0.5
                                     peer-focus:-translate-y-1.5
@@ -487,20 +535,20 @@
                                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
                                     peer-[:not(:placeholder-shown)]:text-gray-500">Recipient Name</label>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">Total Payment</span>
-                                <div class="relative">
-                                  <input type="text" name="total-payment" id="hs-floating-gray-input-total-payment"
-                                    autocomplete="email" class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">Total Payment</span>
+                                  <div class="relative">
+                                    <input type="text" name="total-payment" id="hs-floating-gray-input-total-payment"
+                                      autocomplete="email" class="peer p-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm placeholder:text-transparent disabled:opacity-50 disabled:pointer-events-none
                                   focus:pt-6
                                   focus:pb-2
                                   [&:not(:placeholder-shown)]:pt-6
                                   [&:not(:placeholder-shown)]:pb-2
                                   autofill:pt-6
                                   autofill:pb-2" value="Rp 200.000" readonly>
-                                  <label for="hs-floating-gray-input-total-payment" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                    <label for="hs-floating-gray-input-total-payment" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                                     peer-focus:scale-90
                                     peer-focus:translate-x-0.5
                                     peer-focus:-translate-y-1.5
@@ -509,23 +557,23 @@
                                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
                                     peer-[:not(:placeholder-shown)]:text-gray-500">Total Payment</label>
+                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">Your Bank</span>
-                                <div class="relative">
-                                  <select name="buyer-bank" id="buyer-bank" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">Your Bank</span>
+                                  <div class="relative">
+                                    <select name="buyer-bank" id="buyer-bank" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                                   focus:pt-6
                                   focus:pb-2
                                   [&:not(:placeholder-shown)]:pt-6
                                   [&:not(:placeholder-shown)]:pb-2" required>
-                                    <option selected="">Select your bank account</option>
-                                    <option>BCA</option>
-                                    <option>BNI</option>
-                                    <option>BRI</option>
-                                  </select>
-                                  <label for="buyer-bank" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                      <option selected="">Select your bank account</option>
+                                      <option>BCA</option>
+                                      <option>BNI</option>
+                                      <option>BRI</option>
+                                    </select>
+                                    <label for="buyer-bank" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                                     peer-focus:scale-90
                                     peer-focus:translate-x-0.5
                                     peer-focus:-translate-y-1.5
@@ -534,21 +582,21 @@
                                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
                                     peer-[:not(:placeholder-shown)]:text-gray-500">Your Bank</label>
+                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">Your Bank Number</span>
-                                <div class="relative">
-                                  <input type="number" name="buyer-bank-number"
-                                    id="hs-floating-gray-input-buyer-bank-number" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">Your Bank Number</span>
+                                  <div class="relative">
+                                    <input type="number" name="buyer-bank-number"
+                                      id="hs-floating-gray-input-buyer-bank-number" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                                   focus:pt-6
                                   focus:pb-2
                                   [&:not(:placeholder-shown)]:pt-6
                                   [&:not(:placeholder-shown)]:pb-2
                                   autofill:pt-6
                                   autofill:pb-2" placeholder="Your Bank Number" value="">
-                                  <label for="hs-floating-gray-input-buyer-bank-number" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                    <label for="hs-floating-gray-input-buyer-bank-number" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                                     peer-focus:scale-90
                                     peer-focus:translate-x-0.5
                                     peer-focus:-translate-y-1.5
@@ -557,20 +605,20 @@
                                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
                                     peer-[:not(:placeholder-shown)]:text-gray-500">Admin Bank Number</label>
+                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">On Behalf of Your Bank</span>
-                                <div class="relative">
-                                  <input type="text" name="buyer-name" id="hs-floating-gray-input-buyer-name" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">On Behalf of Your Bank</span>
+                                  <div class="relative">
+                                    <input type="text" name="buyer-name" id="hs-floating-gray-input-buyer-name" class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                                   focus:pt-6
                                   focus:pb-2
                                   [&:not(:placeholder-shown)]:pt-6
                                   [&:not(:placeholder-shown)]:pb-2
                                   autofill:pt-6
                                   autofill:pb-2" placeholder="On Behalf" value="">
-                                  <label for="hs-floating-gray-input-buyer-name" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                    <label for="hs-floating-gray-input-buyer-name" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                                     peer-focus:scale-90
                                     peer-focus:translate-x-0.5
                                     peer-focus:-translate-y-1.5
@@ -579,21 +627,21 @@
                                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
                                     peer-[:not(:placeholder-shown)]:text-gray-500">On Behalf</label>
+                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">Transfer Date</span>
-                                <div class="relative">
-                                  <input type="date" name="transfer-date" id="hs-floating-gray-input-transfer-date"
-                                    class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">Transfer Date</span>
+                                  <div class="relative">
+                                    <input type="date" name="transfer-date" id="hs-floating-gray-input-transfer-date"
+                                      class="peer p-4 block w-full border-gray-200 rounded-lg text-sm placeholder:text-transparent focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                                   focus:pt-6
                                   focus:pb-2
                                   [&:not(:placeholder-shown)]:pt-6
                                   [&:not(:placeholder-shown)]:pb-2
                                   autofill:pt-6
                                   autofill:pb-2" placeholder="dd/mm/yy" value="">
-                                  <label for="hs-floating-gray-input-transfer-date" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                                    <label for="hs-floating-gray-input-transfer-date" class="absolute top-0 start-0 p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent  origin-[0_0] peer-disabled:opacity-50 peer-disabled:pointer-events-none
                                     peer-focus:scale-90
                                     peer-focus:translate-x-0.5
                                     peer-focus:-translate-y-1.5
@@ -602,55 +650,58 @@
                                     peer-[:not(:placeholder-shown)]:translate-x-0.5
                                     peer-[:not(:placeholder-shown)]:-translate-y-1.5
                                     peer-[:not(:placeholder-shown)]:text-gray-500">Transfer Date</label>
+                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="flex flex-col gap-y-2">
-                                <span class="text-sm font-semibold">Transfer Date</span>
-                                <div class="relative">
-                                  <label for="file-input" class="sr-only">Choose file</label>
-                                  <input type="file" name="file-input" id="file-input" class="block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
+                                <div class="flex flex-col gap-y-2">
+                                  <span class="text-sm font-semibold">Transfer Date</span>
+                                  <div class="relative">
+                                    <label for="file-input" class="sr-only">Choose file</label>
+                                    <input type="file" name="file-input" id="file-input" class="block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
                                     file:bg-gray-50 file:border-0
                                     file:me-4
                                     file:py-3 file:px-4">
+                                  </div>
                                 </div>
-                              </div>
 
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-gray-200">
-                          <button type="button"
-                            class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
-                            data-hs-overlay="#hs-vertically-centered-scrollable-modal">
-                            Cancel
-                          </button>
-                          <button type="button"
-                            class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
-                            Submit
-                          </button>
+                          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-gray-200">
+                            <button type="button"
+                              class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+                              data-hs-overlay="#hs-vertically-centered-scrollable-modal">
+                              Cancel
+                            </button>
+                            <button type="button"
+                              class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none">
+                              Submit
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <a href="shop.html">
-                    <button
-                      class="w-full py-3 px-4 text-sm font-semibold text-gray-600 hover:text-gray-900 flex items-center justify-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                          stroke-width="2">
-                          <path d="m8 5l-5 5l5 5" />
-                          <path d="M3 10h8c5.523 0 10 4.477 10 10v1" />
-                        </g>
-                      </svg>
-                      Continue Shopping
-                    </button>
-                  </a>
+                    <a href="shop.html">
+                      <button
+                        class="w-full py-3 px-4 text-sm font-semibold text-gray-600 hover:text-gray-900 flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2">
+                            <path d="m8 5l-5 5l5 5" />
+                            <path d="M3 10h8c5.523 0 10 4.477 10 10v1" />
+                          </g>
+                        </svg>
+                        Continue Shopping
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+
         </div>
 
         <!-- Voucher Selection Modal (Using Preline UI) -->
@@ -757,6 +808,26 @@
                       </button>
                     </div>
                   </div>
+                  
+                  <!-- Cashback Card State Ketika Kosong -->
+                  <div class="bg-blue-50 rounded-xl p-6 mb-4">
+                    <!-- Cashback Amount Section -->
+                    <div class="flex items-center">
+                      <!-- Coin Icon -->
+                      <div class="mr-2 md:mr-4 relative">
+                        <img src="../../public/assets/cashback-img.png" class="max-w-20 md:max-w-40"
+                          alt="cashback Illustration">
+                      </div>
+
+                      <!-- Amount Info -->
+                      <div>
+                        <h2 class="text-gray-900 text-lg md:text-xl font-bold"><span>You don't have cashback yet!</span>
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
 
