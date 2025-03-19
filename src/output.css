@@ -928,6 +928,10 @@ html{
   left: 0px;
 }
 
+.left-1\/2{
+  left: 50%;
+}
+
 .left-4{
   left: 1rem;
 }
@@ -950,6 +954,10 @@ html{
 
 .top-1\/2{
   top: 50%;
+}
+
+.top-7{
+  top: 1.75rem;
 }
 
 .top-full{
@@ -995,6 +1003,11 @@ html{
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.mx-3{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .mx-4{
@@ -1444,6 +1457,10 @@ html{
   width: 5rem;
 }
 
+.w-24{
+  width: 6rem;
+}
+
 .w-28{
   width: 7rem;
 }
@@ -1499,10 +1516,6 @@ html{
 
 .w-px{
   width: 1px;
-}
-
-.min-w-14{
-  min-width: 3.5rem;
 }
 
 .min-w-7{
@@ -1599,6 +1612,11 @@ html{
 
 .origin-\[0_0\]{
   transform-origin: 0 0;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-x-full{
@@ -3065,48 +3083,6 @@ html{
 .before\:ease-in-out::before{
   content: var(--tw-content);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.after\:absolute::after{
-  content: var(--tw-content);
-  position: absolute;
-}
-
-.after\:bottom-0::after{
-  content: var(--tw-content);
-  bottom: 0px;
-}
-
-.after\:start-3\.5::after{
-  content: var(--tw-content);
-  inset-inline-start: 0.875rem;
-}
-
-.after\:top-7::after{
-  content: var(--tw-content);
-  top: 1.75rem;
-}
-
-.after\:w-px::after{
-  content: var(--tw-content);
-  width: 1px;
-}
-
-.after\:-translate-x-\[0\.5px\]::after{
-  content: var(--tw-content);
-  --tw-translate-x: -0.5px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.after\:bg-gray-200::after{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
-}
-
-.last\:after\:hidden:last-child::after{
-  content: var(--tw-content);
-  display: none;
 }
 
 .checked\:border-blue-600:checked{
